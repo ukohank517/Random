@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['usbIO_Windows.py'],
-             pathex=['C:\\Develop\\home\\daidai\\home\\daida\\workspace\\Random\\python'],
+             pathex=['C:\\Develop\\home\\daidai\\home\\daida\\workspace\\Random\\python\\USBIO\\windows'],
              binaries=[],
              datas=[],
              hiddenimports=[],

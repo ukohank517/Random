@@ -38,6 +38,11 @@ if __name__ == "__main__":
     print u"-----pathは以下のようになってます。-----"
     print path
     print u"-------------------------------------"
+    if len(path)==0:
+        print u"ドライブFが存在しません。エンターキー押してアプリを終了させてください。"
+        raw_input()
+        exit()
+        
     time=1
     while(1):
         raw_input()

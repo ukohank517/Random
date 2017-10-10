@@ -1,4 +1,4 @@
-('C:\\Develop\\home\\daidai\\home\\daida\\workspace\\Random\\python\\build\\usbIO_Windows\\out00-PYZ.pyz',
+('C:\\Develop\\home\\daidai\\home\\daida\\workspace\\Random\\python\\USBIO\\windows\\build\\usbIO_Windows\\out00-PYZ.pyz',
  [('encodings.aliases',
    'C:\\Python27\\lib\\encodings\\aliases.py',
    'PYMODULE'),
