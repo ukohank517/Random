@@ -1,0 +1,36 @@
+#このファイルは一行一行コピペして使ってください。
+library(RMeCab)                     # 読み取り
+setwd("workspace/rstudio/fuji/Q8")  # csvの場所を設定
+
+okinawa <- read.csv(file('H18koe.csv' ,encoding='Shift_JIS')) # 日本語文字コードへ変更
+xtabs(? Sex + Satis,data = okinawa) 
+                                    ########## この行はコピペーしてやって ##########
+                                    ###### ?  +で挟んだカテゴリで比較する。 
+###### Satis
+###### Sex    やや不満 やや満足 該当しない 大変不満 大変満足
+###### 女性        6       79          0        1       91
+###### 男性        8       65          2        1       54
+
+chisq.test(xtabs(?Sex + Satis,data = okinawa))
+######
+###### 	 Pearson's Chi-squared test
+###### 
+###### data:  xtabs(?Sex + Satis, data = okinawa)
+###### X-squared = 6.0342, df = 4, p-value = 0.1966
+######
+######  警告メッセージ: 
+######  chisq.test(xtabs(?Sex + Satis, data = okinawa)) で: 
+######    カイ自乗近似は不正確かもしれません 
+
+# p-valueが0.1966は有意の差ではない。
+# 該当しないは、0,2などの小さな数値なので、警告が出てる。
+
+xtabs(? Age + Satis,data = okinawa)
+chisq.test(xtabs(? Age + Satis,data = okinawa))
+
+xtabs(? Region + Satis,data = okinawa)
+chisq.test( xtabs(? Region + Satis,data = okinawa))
+
+
+setwd("/Users/ukohank517")          # おまじない
+

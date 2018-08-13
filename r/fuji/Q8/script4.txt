@@ -1,0 +1,12 @@
+# このファイルはscript3の実行した前提で実行する。
+
+
+okinawa.t <- xtabs(Freq ? word + id, data = okinawa.DF)
+row.names( okinawa.t )
+
+
+library(MASS)                           # MASSパッケージを読み込んで
+okinawa.corr <- corresp(okinawa.t, nf = 2)
+biplot(okinawa.corr)
+# 右にF, 左にM
+

@@ -1,0 +1,9 @@
+1. 事前準備: MeCab, RMeCabのインストール
+   Mecab: brew install mecab,
+   	  brew install mecab-ipadic
+   RMecab: (INR) install.packages("RMeCab", repos = "http://rmecab.jp/R")
+
+
+
+    
+
