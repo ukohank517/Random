@@ -17,11 +17,13 @@
 - go/abc084
   - 初go言語でabcを参戦した、時間かかったのでバックアップとして保存した。
 
-- python/USBIO/windows
-  - usbIO_Windows.py: USBがパソコンに接続したとき、このプログラムを立ち上がって、リターンキーでeject、insertの二つの動作を繰り返す動作のみ。Windowsのパソコンのみ動作する。（cmdのコマンドを実行しているだけ。）
+- python
+  - /USBIO/windows/usbIO_Windows.py: USBがパソコンに接続したとき、このプログラムを立ち上がって、リターンキーでeject、insertの二つの動作を繰り返す動作のみ。Windowsのパソコンのみ動作する。（cmdのコマンドを実行しているだけ。）
     - 注意事項1:ejectした後、プログラムを止めた場合、USBを再度insertしてください
     - 注意事項2:管理者権限が必要です。
 - python/rakuten_clickpost: 楽天で販売履歴のcsvファイルをダウンロードして、そのファイルの中身より住所録を取り出してクリックポストに使用できる。(詳細不明、そうすればいいことがあるみたい。)
+  - /yue/wordcloud_test.txt
+    - wordcloudの基本作成、メモ用
 
 
 - r
