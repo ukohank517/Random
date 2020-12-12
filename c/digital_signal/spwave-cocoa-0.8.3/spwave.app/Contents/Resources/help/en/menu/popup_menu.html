@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Popup Menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2><a name="popup">Popup Menu</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; Popup Menu
+</p>
+
+<p>
+Popup menu will be displayed by clicking the right button or Control+click on
+Mac OS in the waveform area. 
+
+The popup menu includes menus frequently used and menus often used in the waveform area.
+</p>
+
+<h3><a name="popup_play">Play Selected Region</a></h3>
+<p>
+Play the selected region. Same as clicking the middle mouse button.
+</p>
+<h3><a name="popup_play_window">Play Window Contents</a></h3>
+<p>
+Play the current displayed area.
+</p>
+<h3><a name="popup_play_file">Play Entire File</a></h3>
+<p>
+Play the entire file.
+</p>
+<h3><a name="popup_stop">Stop Processing</a></h3>
+<p>
+Stop the current processing.
+</p>
+
+
+<h3><a name="popup_zoom_in">Zoom In</a></h3>
+<p>
+Same as <a href="view_menu.html#view_zoom_in">Zoom In</a>.
+</p>
+<h3><a name="popup_zoom_out">Zoom Out</a></h3>
+<p>
+Same as <a href="view_menu.html#view_zoom_out">Zoom Out</a>.
+</p>
+<h3><a name="popup_zoom_full_out">Zoom Full Out</a></h3>
+<p>
+Same as <a href="view_menu.html#view_zoom_full_out">Zoom Full Out</a>.
+</p>
+<h3><a name="popup_zoom_region">Zoom Region</a></h3>
+<p>
+Same as <a href="view_menu.html#view_zoom_region">Zoom Region</a>.
+</p>
+
+<h3><a name="popup_align">Align</a></h3>
+<p>
+Same as <a href="page_menu.html#page_align">Align</a>.
+</p>
+<h3><a name="popup_select_all_region">Select Same Region</a></h3>
+<p>
+Same as <a href="page_menu.html#page_select_all_region">Select Same Region</a>.
+</p>
+<h3><a name="popup_select_from_here">Select From Here</a></h3>
+<p>
+Select from here to the tail of the file.
+</p>
+<h3><a name="popup_select_to_here">Select To Here</a></h3>
+<p>
+Select from the head of the file to here.
+</p>
+
+
+<h3><a name="popup_edit">Edit</a></h3>
+
+<ul>
+<li><a name="popup_cut">Cut</a><br>
+Cut the selected region and copy the data into the clipboard.
+
+<li><a name="popup_copy">Copy</a><br>
+Copy data of the selected region into the clipboard.
+
+<li><a name="popup_paste">Paste</a><br>
+Paste the contents of the clipboard.
+The target data will be replaced with the clipbard contents.
+
+<li><a name="popup_mix">Mix</a><br>
+Mix the contents of the clipboard.
+The target data will be mixed with the clipbard contents.
+
+<li><a name="popup_insert">Insert</a><br>
+Insert the contents of the clipboard.
+
+<li><a name="popup_replace">Replace</a><br>
+Replace the target data with the contents of the clipboard.
+
+<li><a name="popup_change_value">Change Value...</a><br>
+Change value at the cursor location.
+
+<li><a name="popup_insert_pause">Insert Pause...</a><br>
+Insert pause to the cursor location.
+
+</ul>
+
+<h3><a name="popup_label">Label</a></h3>
+<ul>
+  <li><a name="popup_insert_simple_label">Insert Simple Label</a><br>
+  Insert a simple label which includes only time information.
+      
+  <li><a name="popup_insert_value_label">Insert Label with Value</a><br>
+  Insert a label which includes an amplitude value at the current cursor
+  location. The amplitude is taken from the currently selected channel or the
+  first channel in no channel selection.
+
+  <li><a name="popup_insert_label">Insert Label...</a><br>
+  Insert a label.
+  <a href="../dialog/label.html">Label Dialog</a> will popup, and press OK
+  after fill in desired items. 
+
+  <li><a name="popup_change_label">Change Label...</a><br>
+  Change label information closest to the cursor.
+  <a href="../dialog/label.html">Label Dialog</a> will popup, and press OK
+  after fill in desired items. 
+      
+  <li><a name="popup_erase_label">Erase Label</a><br>
+  Erase a label closest to the cursor.
+      
+  <li><a name="popup_erase_label_region">Erase Label in Selected Region</a><br>
+  Erase labels in the selected region.
+
+  <li><a name="popup_select_between_labels">Select Between Labels</a><br>
+  Select an interval between two labels when the cursor is located between two labels.
+      
+  <li><a name="popup_set_region_label">Set Region Label</a><br>
+  Set the current selected region as a region label.
+
+  <li><a name="popup_set_region_label_as_region">Set Region Label As Current Region</a><br>
+  Set the region label closest to the cursor as a current selection.
+
+  <li><a name="popup_concat_region_labels">Concatenate Region Labels</a><br>
+  Concatenate the region label closest to the cursor with the adjacent region label.
+
+  <li><a name="popup_divide_region_label">Divide Region Label</a><br>
+  Divide the region label into two region labels at the cursor location.
+
+</ul>
+
+<h3><a name="popup_analysis">Analysis</a></h3>
+<ul>
+  <li><a name="popup_analysis_region">Analysis of Selected Region</a><br> 
+Analyze the selected region with parameters of <a href="../dialog/analysis.html">Analysis
+Dialog</a>.
+
+Too long region cannot be analyzed.
+
+  <li><a name="popup_analysis_wide">Wide Band Analysis</a><br>
+
+Wide band analysis of the selected region is executed with parameters of <a
+href="../dialog/analysis.html">Analysis Dialog</a>.  The selected region is
+adjusted so as to fit to the internal analysis frame whose default value is 8
+ms.  Wide band analysis gives high time resolution and low freuqnecy
+resolution.
+
+  <li><a name="popup_analysis_narrow">Narrow Band Analysis</a><br>
+
+Narrow band analysis of the selected region is executed with parameters of <a
+href="../dialog/analysis.html">Analysis Dialog</a>. The selected region is
+adjusted so as to fit to the internal analysis frame whose default value is
+51.1 ms.  Narrow band analysis gives low time resolution and high freuqnecy
+resolution.
+</ul>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; Popup Menu
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2004-07-20 13:15:24 hideki"
+</p>
+</body> </html>

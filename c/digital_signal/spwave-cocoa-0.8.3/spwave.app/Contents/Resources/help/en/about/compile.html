@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>How To Compile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2>How To Compile</h2> 
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">About spwave</a> &gt; How To Compile
+</p>
+
+<p>
+To compile the source code, spLibs (spBase, spAudio, spComponent,
+spLib and spPlugin) which can be downloaded from <a
+href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/index.html#download"
+target="_top">here</a> are required.
+</p>
+<p>
+How to compile on Unix (including Linux or Cygwin) is as follows.
+Go to the
+spwave top directory, and make a symbolic link from `include' directory
+and `lib' directory of spLibs (e.g. /usr/local/include and /usr/local/lib):
+</p>
+<pre>
+ % cd spwave-X.X.X
+ % ln -s /usr/local/include
+ % ln -s /usr/local/lib
+</pre>
+
+<p>
+If your platform is supported by the configuration file of spBase, you can
+build executable binary by typing `make' in the source directory:
+</p>
+<pre>
+ % cd spwave
+ % make
+</pre>
+
+<p>
+To install this binary to your system directory (e.g /usr/local), login as
+root and type:
+</p>
+<pre>
+ # make SPDESTROOT=/usr/local install
+</pre>
+
+<p>
+If you don't want to make a symbolic link from spLibs directory, you can
+compile and install by adding <code>TOP=/usr/local</code> option (/usr/local is top
+directory of spLibs) to the above command line of `make' such as:
+</p>
+ <pre>
+ % cd spwave-X.X.X
+ % cd spwave
+ % make TOP=/usr/local
+ % su
+ # make TOP=/usr/local SPDESTROOT=/usr/local install
+</pre>
+
+<p>
+By default, the gtk version is selected forcedly on Linux, so compiling the
+Motif version on Linux requires <code>USE_MOTIF=y</code> option against `make'
+command.  If you want to compile on Windows or Mac OS, you have to find out
+how to compile spwave by yourself :-)
+</p>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">About spwave</a> &gt; How To Compile
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 00:47:41 hideki"
+</p>
+</body>
+</html>

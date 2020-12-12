@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Command-Line Options</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2><a name="options">コマンドラインオプション</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">操作方法</a> &gt; コマンドラインオプション
+</p>
+
+
+<p>
+よく使うコマンドラインオプションについて説明します．
+他にもコマンドラインオプションはありますが，
+ほとんどが<a href="../dialog/preference.html">設定ダイアログ</a>などで設定できるものなので，省略します．
+</p>
+
+<dl>
+  <dt> <a name="option_freq"><b>-f -freq</b></a> <i>???</i>
+  <dd>
+      サンプリング周波数を設定します．単位は Hz です．
+      <br>
+      例：
+      <pre>
+      spwave -f 8000 data_8k.ad
+      </pre>
+      この例では data_8k.ad をサンプリング周波数 8kHz で読み込んでいます．
+      
+  <dt> <a name="option_format"><b>-F -format</b></a> <i>???</i>
+  <dd>
+      ファイルのフォーマットを指定します．指定できるフォーマットは，
+      <a href="basic.html#format">フォーマット</a>の項を参照して下さい．
+      <br>
+      例：
+      <pre>
+      spwave -format swap data_swap.ad
+      </pre>
+      この例では data_swap.ad をスワップフォーマットで読み込んでいます．
+
+  <dt> <a name="option_channel"><b>-c -channel</b></a> <i>???</i>
+  <dd>
+      チャネル数を指定します．
+      <br>
+      例：
+      <pre>
+      spwave -channel 8 data_8channel.ad
+      </pre>
+      この例では data_8channel.ad を8チャネルデータとして読み込んでいます．
+      
+      
+  <dt> <a name="option_bit"><b>-b -bit</b></a> <i>bits_per_sample</i>
+  <dd>
+      1サンプルあたりのビット数を指定します．
+      例えば，C言語でいうshort型で保存してあれば，ほとんどの環境では，
+      16ビットとなります．指定できるビット数は，
+      <a href="basic.html#format">フォーマット</a>の項を参照して下さい．
+      
+      <br>
+      例：
+      <pre>
+      spwave -bit 64 data_64bit.ad
+      </pre>
+      この例では data_64bit.ad を64ビットのデータとして読み込んでいます．
+      
+
+<!--
+  <dt> <a name="option_play_command"><b>-play</b></a> <i>play_command</i>
+  <dd>
+      音声を再生するためのコマンドを指定します．
+      音声の再生は，このコマンドを用いて行うことになります．
+      ただし，LinuxやWindowsなど一部の環境では，
+      <a href="#option_use_play"><b>-useplay オプション</b></a>
+      が指定されていないと，このコマンドは使用されません．
+      
+      また，次回 spwave を利用する際もこのコマンドが用いられます．
+      
+      <br>
+      再生コマンドのフォーマットとして，以下の変換文字列が使用できます．再生
+      コマンドは，16ビットリニアデータを再生できる必要があります．
+      <dl>
+	<dt><i>%F</i>, <i>%s</i>
+	<dd>
+	    ファイル名です．
+	    この場合，再生コマンドは，
+	    16ビットリニアのrawファイルを再生するものと仮定します．
+
+	<dt><i>%W</i>
+	<dd>
+	    ファイル名です．
+	    この場合，再生コマンドは，
+	    16ビットリニアのWavファイルを再生するものと仮定します．
+
+	<dt><i>%H</i>
+	<dd>
+	    単位がHzのサンプリング周波数です．
+
+	<dt><i>%K</i>
+	<dd>
+	    単位がkHzのサンプリング周波数です．
+	    
+	<dt><i>%C</i>
+	<dd>
+	    チャネル数です．
+	    これが指定されていない場合は，ステレオデータは再生されません．
+      </dl>
+      例：
+      <pre>
+      spwave -play "play_sound -f %H %F"
+      </pre>
+      この例では再生コマンドとして"play_sound"というコマンドを用いており，
+      この"play_sound"というコマンドは，16ビットリニアrawファイルを再生し，
+      サンプリング周波数を-fオプションによりHz単位で指定するものとなっています．
+      
+      
+  <dt> <a name="option_use_play"><b>-useplay</b></a> <i>(use_play)</i>
+  <dd>
+      音声の再生を，
+      <a href="#option_play_command"><b>-play オプション</b></a>
+      で指定されたコマンドを用いて行います．
+
+      LinuxやWindowsなど一部の環境では，このオプションを指定しないと，
+      指定されたコマンドは使用されません．
+      
+      なお，次回 spwave を利用する際は，再びこのオプションを指定する必要はありません．
+      
+
+-->
+  
+  <dt> <a name="option_help"><b>-h -help</b></a>
+  <dd>
+      ヘルプメッセージを表示します．
+      
+      
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">操作方法</a> &gt; コマンドラインオプション
+</p>
+
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 01:31:09 hideki"
+</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  int i,j,size,data_size;
+  double w1[50][95],w2[5][50];
+  short test[8000];
+  double heikin[95];
+  FILE *file_input;
+  fpos_t sz;
+  
+  if((file_input = fopen("heikin.dat","r"))==NULL){
+    fprintf(stderr,"cannot read heikin.dat\n");exit(-1);
+  }
+  for(j=0;j<95;j++){
+    fscanf(file_input,"%lf",&heikin[j]);
+  }
+  fclose(file_input);
+
+  
+  if((file_input = fopen("w1.dat","r"))==NULL){
+    fprintf(stderr,"cannot read w1.dat\n");exit(-1);
+  }
+  for(i=0;i<50;i++){
+    for(j=0;j<95;j++){
+      fscanf(file_input,"%lf",&w1[i][j]);
+    }
+  }
+  fclose(file_input);
+
+  if((file_input = fopen("w2.dat","r"))==NULL){
+    fprintf(stderr,"cannot read w2.dat\n");exit(-1);
+  }
+  for(i=0;i<5;i++){
+    for(j=0;j<50;j++){
+      fscanf(file_input,"%lf",&w2[i][j]);
+    }
+  }
+  fclose(file_input);
+  //testデーターの中身のサイズを測る
+  if((file_input=fopen("test.raw","rb"))== NULL){
+    printf( "test.rawファイルが開けません¥n");exit(-1);
+  }
+  fseek(file_input, 0, SEEK_END);
+  fgetpos(file_input, &sz);
+  //その長さを使う,shortは2バイト
+  data_size=sz/2;
+  if((file_input=fopen("test.raw","rb"))== NULL){
+    printf( "test.rawファイルが開けません¥n");exit(-1);
+  }
+  //  fread(data,sizeof(short),)
+  fclose(file_input);
+  
+
+  
+  return 0;
+}

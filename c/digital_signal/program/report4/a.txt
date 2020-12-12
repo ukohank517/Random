@@ -1,0 +1,28 @@
+  //xのフーリエ変換    
+  for(k=0;k<8000*20;k++){
+    real_x[k]=0;
+    imag_x[k]=0;
+    for(n=0;n<8000;n++){
+      real_x[k]+=(double)x[n]*cos(2*Pi*k*n/8000.0)/15000.0; 
+      imag_x[k]+=(double)x[n]*sin(2*Pi*k*n/8000.0)/15000.0;
+    }
+    F_x[k]=sqrt(real_x[k]*real_x[k]+imag_x[k]*imag_x[k]);
+  }
+  
+  //hのフーリエ変換
+  for(k=0;k<8000*20;k++){
+    real_d[k]=0;
+    imag_d[k]=0;
+    for(n=0;n<50;n++){
+      real_d[k]+=(double)d[n]*cos(2*Pi*k*n/8000.0)/15000.0;
+      imag_d[k]+=(double)d[n]*sin(2*Pi*k*n/8000.0)/15000.0;
+    }
+    F_d[k]=sqrt(real_d[k]*real_d[k]+imag_d[k]*imag_d[k]);
+  }
+  
+  //Δの値
+  norm =0;
+  for(k=0;k<8000*20;k++){
+    norm +=real_x[k]*real_x[k]+imag_x[k]*imag_x[k];
+  }
+  //

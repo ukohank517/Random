@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>spwave</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h1>About spwave</h1>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">About spwave</a>
+</p>
+
+
+<h2><a name="introduction">Introduction</a></h2> 
+
+<p>
+spwave is an audio file editor supporting several sound formats including
+WAV, AIFF, MP3, Ogg Vorbis, raw, and more. The program is designed for
+research use, so stability and usability are regarded as important. spwave
+runs on multiple platforms including Windows, Mac OS, and Linux.
+</p>
+
+<hr>
+<h2><a name="features">Features</a></h2> 
+
+<p>
+spwave has following features.
+</p>
+<ul>
+<li> Support for multiple platforms: Windows, Mac OS, Linux (Motif, gtk), etc.
+<li> Support for WAV, AIFF, MP3, Ogg Vorbis, raw, and text files by using plug-ins.
+<li> Support for many bits/samples: 8bits, 16bits, 24bits, 32bits, 32bits float, 64bits double.
+<li> Converting the sampling frequency and the bits/sample of a file.
+<li> Playing, zooming, cropping, deleting, extracting, etc. of a selected region.
+<li> Fade-in, fade-out, gain adjustment, channel swapping, etc of a selected region.
+<li> Editing file information that supports comments of WAV and AIFF, and ID3 tag of MP3.
+<li> Analysis of a selected region using several analysis types,
+  e.g. spectrum, smoothed spectrum, phase, unwrapped phase and group delay.
+<li> Undoing and redoing without limitation of the number of times.
+<li> Waveform extraction by drag &amp; drop.
+
+<li> Opening files by drag &amp; drop.
+<li> Autosaving of selected regions (you can do this by drag &amp; drop also).
+<li> Saving positions and regions as labels.
+<li> Viewing some waveforms and setting regions synchronously.
+<li> Almost all processing is 64 bits processing internally.
+</ul>
+
+
+<hr>
+<h2><a name="formats">Supported Files</a></h2> 
+
+<ul>
+<li> Reading and Writing
+  <ul>
+  <li> Raw file (8bits PCM, 16bits PCM, 24bits PCM, 32bits PCM, 32bits float PCM, 
+    64bits double PCM, ulaw, alaw)
+  <li> WAV file (8bits PCM, 16bits PCM, 24bits PCM, 32bits PCM, ulaw, alaw, ADPCM, IMA ADPCM, GSM 6.10)
+  <li> AIFF file (8bits PCM, 16bits PCM, 24bits PCM, 32bits PCM)
+  <li> AIFC file (8bits PCM, 16bits PCM, 24bits PCM, 32bits PCM, ulaw, alaw)
+  <li> MP3 file (MPEG1 layer 3, writing MP3 requires another plugin package)
+  <li> Ogg Vorbis file
+  <li> Windows Media Audio file (Windows version only)
+  <li> Monkey's Audio (.ape) file (Windows 32bit version only)
+  <li> AU/SND file (8bits PCM, 16bits PCM, 24bits PCM, 32bits PCM, ulaw, alaw, G721, G723)
+  <li> PARIS file (16bits PCM, 24bits PCM)
+  <li> NIST file (16bits PCM, 24bits PCM, 32bits PCM, ulaw, alaw)
+  <li> IRCAM file (16bits PCM, 32bits PCM, ulaw, alaw)
+  <li> Text file
+  </ul>
+
+<li> Reading Only
+  <ul>
+  <li> MP3 file (MPEG2 layer 3, also supports VBR)
+  <li> RMP file (MPEG1 layer 3, MPEG2 layer 3, also supports VBR)
+  </ul>
+</ul>
+
+
+<hr>
+<h2><a name="install">Install</a></h2> 
+
+<p>
+On Windows and Mac OS, you can install spwave just by unpacking the archive.
+However, if you want to move the executable to another folder, you have to
+move plug-ins with it. If you don't do that, spwave can load no files.
+Linux version requires installing plug-ins (spPlugin 0.8.2 or higher) before
+installing spwave. Using RPM version (for Redhat-based Linux) or deb version (for
+Debian-based Linux) is easier way.
+</p>
+<p>
+Uninstallation can be simply done by removing files. You can remove the
+files safely because spwave doesn't use the registry and doesn't replace system files.
+If you installed RPM/deb version on Linux, you should uninstall it based on
+the usage of RPM/deb.
+</p>
+
+<p>
+To compile the source code on Linux/Unix, see <a href="compile.html">How to compile</a>.
+</p>
+
+
+<hr>
+<h2><a name="platforms">Supported Platforms</a></h2> 
+
+<p>
+spwave is known to work at least on Windows XP/Vista/7, Mac OS 10.4/10.6, 
+and Linux (Redhat, Fedora, CentOS, Ubuntu, etc.).
+</p>
+
+
+<hr>
+<h2><a name="bugs">Bugs</a></h2> 
+
+<p>
+A level meter introduced from version 0.6.7 does not display exact amplitude.
+</p>
+
+<p>
+Although support of ASIO driver is added in version 0.6.11-2b, ``ASIO
+Multimedia Driver'' doesn't work well. Please use an ASIO driver of an ASIO
+supported device. Since ``ASIO Multimedia Driver'' is used for non-ASIO
+devices, you probably don't suffer from that practically.
+</p>
+
+<p>
+Window scrolling in Windows Media Audio file which is supported by version
+0.6.12-4b does not work correctly (the time position does not coincide 
+with the actual time line). It has not been clarified yet if the problem 
+is caused by the Microsoft's library or my implementation. If you have 
+trouble with the problem, please save the file as the WAV format.
+</p>
+
+<p>
+Mac OS X (Carbon) version has a bug that right-click of a mouse doesn't work
+correctly on the waveform overview display. Mac OS X Cocoa version doesn't
+have this problem.
+</p>
+
+
+<hr>
+<h2><a name="bug_report">Bug Report</a></h2> 
+
+<p>
+If you have questions or find bugs, please send me an e-mail. Please include
+the following information when you report bugs.
+</p>
+<ul>
+<li> Version of spwave (or the file name of the downloaded archive)
+<li> Version of the operating system  (e.g. Windows XP SP2, Mac OS X 10.6.8, etc.)
+<li> Symptoms in delail
+<li> Version of the plugin if the bug is associated with a particular file. 
+   e.g. the bug is related to writing MP3 files.
+</ul>
+<p>
+Including `spwave' in the subject of the e-mail is also helpful for me.
+</p>
+
+<p>
+I have received many e-mails related to saving as MP3. The function saving as
+MP3 is turned off as default to avoid the license and patent related problems
+of MP3. To turn on the function, you have to download and install the MP3
+output plugin. Please download and install the plugin if your condition
+agrees with the condition at the official site.
+</p>
+
+
+<hr>
+<h2><a name="license">License</a></h2> 
+
+<p>
+spwave is free software. Please see LICENSE.txt included in the archive
+for more information.
+</p>
+
+
+<hr>
+<h2><a name="official_site">Official Site</a></h2> 
+
+<p>
+The official web site is: 
+</p>
+<blockquote>
+<a href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/spwave/index.html"
+ target="_top">
+http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/spwave/index.html</a>
+</blockquote>
+
+<hr>
+<h2><a name="thanks_to">Thanks To</a></h2> 
+
+<p>
+spwave uses the following libraries. I'd like to thank developers of the
+libraries.
+</p>
+<ul>
+<li> AU/SND, PARIS, NIST, IRCAM, WAV ADPCM, ... (introduced from version 0.6.8)
+  <ul>
+  <li> <a href="http://www.mega-nerd.com/libsndfile/" target="_top">libsndfile</a><br>
+      Reading and writing of many of above formats was made possible by
+      libsndfile. Thanks Erik.
+  </ul>
+
+<li> Ogg Vorbis (introduced from version 0.6.8)
+  <ul>
+  <li> <a href="http://www.vorbis.com/" target="_top">libvorbis and libogg</a>
+  </ul>
+ 
+<li> Monkey's Audio (Windows 32bit version only; introduced from version 0.6.11)
+  <ul>
+  <li> <a href="http://www.monkeysaudio.com/" target="_top">http://www.monkeysaudio.com/</a>
+  </ul>
+
+<li> MP3 reading (included in spMpeg plugin package)
+  <ul>
+  <li> FreeAmp's (currently known as Zinf) decoding engine 
+  </ul>
+
+<li> ASIO implementation (introduced from version 0.6.11; included in the asio plugin)
+  <ul>
+  <li> Steinberg ASIO Software Developer Kit<br>
+       Copyright notice: ASIO is a trademark of Steinberg Soft- und Hardware GmbH
+  </ul>
+</ul>
+<p>
+I also would like to thank people who send me patches, bug reports, and
+requests.
+</p>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">About spwave</a>
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-09-08 18:36:18 hideki"
+</p>
+</body>
+</html>

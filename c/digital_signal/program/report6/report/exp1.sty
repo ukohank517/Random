@@ -1,0 +1,40 @@
+\usepackage{okumacro}
+\usepackage[margin=25mm]{geometry}
+% \usepackage[format=hang,font=small,labelfont=bf,textfont=bf,labelsep=quad,justification=raggedright,singlelinecheck=true]{caption}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{ascmac}
+\usepackage{listings, jlisting}%jlisting.styは各自でダウンロードして
+                               %ソースと同じディレクトリに置いておきましょう．
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}               %urlを貼り付けるためのパッケージ
+\usepackage{setspace}          %行間調整用のパッケージ
+
+%%%%% 学科計算機実習室の環境以外で使用する場合には以下の
+%%%%% makeatletter-makeatotheを削除，上から三行目のcaptionパッケージを使
+%%%%% 用するとよい
+\makeatletter
+\long\def\@makecaption#1#2{% #1=図表番号、#2=キャプション本文
+\small\bfseries
+\sbox\@tempboxa{#1\hspace{1em}#2}
+\ifdim \wd\@tempboxa >\hsize
+#1 #2\par
+\else
+\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}
+\fi}
+\makeatother
+
+%% プログラムのソースなどのリストを記述するための設定　ここから
+\lstset{%
+ language={C}, %
+ basicstyle={\footnotesize},%
+ identifierstyle={\footnotesize},%
+ commentstyle={\footnotesize},%
+ keywordstyle={\footnotesize\bfseries},%
+ ndkeywordstyle={\footnotesize},%
+ stringstyle={\footnotesize\ttfamily},%
+ frame={tb},%
+ breaklines=true,%
+}
+% % プログラムのソースなどのリストを記述するための設定　ここまで

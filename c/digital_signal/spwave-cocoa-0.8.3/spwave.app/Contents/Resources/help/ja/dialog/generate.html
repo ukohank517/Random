@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Generate Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="generate">波形生成</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 波形生成
+</p>
+
+<h3><a name="waveform_tab">波形</a></h3>
+
+<dl>
+<dt><a name="waveform">波形</a></dt>
+<dd>
+波形の種類を選択します．
+<ul>
+<li>Recording: マイクなどの入力からの音声を録音する場合に選択します．
+なお，現状では，録音機能は本格的な使用（重要な音声のレコーディングやデータベース構築）には向いていません．
+ちょっとした実験・テストで使用するための機能だと思って下さい．</li>
+<li>Silence: 無音のファイルを作成する場合に選択します．</li>
+<li>Sine: 正弦波です．</li>
+<li>Square: 方形波です．</li>
+<li>Triangle: 三角波です．</li>
+<li>Sawtooth: 鋸歯状波です．</li>
+<li>White Noise: 白色雑音です．</li>
+</ul>
+</dd>
+
+<dt><a name="f0">周波数</a></dt>
+<dd>
+信号の周波数を設定します．音の高さに相当します．
+波形がSine，Square，Triangle，Sawtoothの場合に有効です．
+</dd>
+
+<dt><a name="phase">位相</a></dt>
+<dd>
+信号の初期位相を角度で設定します．この値によって波の開始位置が変わります．
+波形がSine，Square，Triangle，Sawtoothの場合に有効です．
+</dd>
+
+<dt><a name="gain_dB">ゲイン(dB)</a></dt>
+<dd>
+波のゲインを指定します．取りうる最大値（16ビット量子化の場合は32768）からのデシベル値で指定します．
+例えば，振幅値が最大値の半分（16ビット量子化の場合は16384）の場合は，約 -6 dBとなります．
+波形がSine，Square，Triangle，Sawtoothの場合に有効です．
+特に、White Noise（白色雑音）の場合は，オーバーフローを起こしやすいので，ゲインを下げることをお勧めします．
+もっとも，白色雑音はオーバーフローを起こした所であまり音質に影響はないと思いますが…．
+</dd>
+
+<dt><a name="gain">ゲイン(%)</a></dt>
+<dd>
+波のゲインをパーセンテージで指定します．取りうる最大値に対するパーセンテージで指定します．
+例えば，振幅値が最大値の半分の場合は，50%となります．
+波形がSine，Square，Triangle，Sawtoothの場合に有効です．
+特に、White Noise（白色雑音）の場合は，オーバーフローを起こしやすいので，ゲインを下げることをお勧めします．
+</dd>
+
+<dt><a name="delay">ディレイ</a></dt>
+<dd>
+波がこの長さの後に開始します．それまでは0の値が入ります。
+</dd>
+
+<dt><a name="duration">継続長</a></dt>
+<dd>
+波の継続時間の長さです．
+</dd>
+</dl>
+
+
+<h3><a name="file_tab">ファイル</a></h3>
+
+<dl>
+<dt><a name="length">全体の長さ</a></dt>
+<dd>
+信号全体の長さを指定します．値が0の場合は，<a
+href="#delay">ディレイ</a>と<a href="#duration">継続長</a>の値から算出されます．
+</dd>
+
+<dt><a name="bit">ビット/サンプル</a></dt>
+<dd>
+ビット/サンプルを指定します．
+</dd>
+
+<dt><a name="samp_rate">サンプリング周波数</a></dt>
+<dd>
+サンプリング周波数を指定します．
+</dd>
+
+<dt><a name="channel">チャネル数</a></dt>
+<dd>
+チャネル数を指定します．
+</dd>
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 波形生成
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-09-03 13:04:40 hideki"
+</p>
+</body> </html>

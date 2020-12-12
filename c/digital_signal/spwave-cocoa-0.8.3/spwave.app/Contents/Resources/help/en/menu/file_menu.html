@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>File Menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2>File Menu</h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; File Menu
+</p>
+
+<p>
+Opening files, saving files, quiting spwave, etc.
+</p>
+
+<h3><a name="file_open">Open...</a></h3>
+
+<p>
+Load a file into the current window.
+Select the desired file from the file dialog.
+You can change the attribute of opening in File Type.
+The following items are available in File Type.
+</p>
+
+    <ul>
+    <li>Auto Detect - detects a file format automatically.
+	The format dialog will be displayed when spwave cannot detect the format.
+      
+    <li>Default -
+	spwave loads the file using the default format when spwave cannot detect the format.
+
+    <li>Frequency Data - 
+loads the file as frequency data when spwave cannot detect the format.
+The end point of the file is considered as half size of sampling frequency in format dialog.
+    </ul>
+    
+
+<h3><a name="file_open_new">Open New...</a></h3>
+    
+    <p>
+    Same as <a href="#file_open">Open...</a> except to create new window when opening a file.
+    </p>
+    
+<h3><a name="file_generate">Generate...</a> </h3>
+    <p>
+    Generate a new file such as a sine wave, square wave, sawtooth wave, and so on.
+    You can also perform recording by this menu.
+    For more information, see <a href="../dialog/generate.html">Generate Dialog</a>.
+    </p>
+
+<h3><a name="file_save">Save</a> </h3>
+    <p>
+    Overwrite the current file to the original file.
+    When the file name is not decided yet, it is same as <a
+    href="#file_save_as">Same As...</a>.
+    </p>
+
+    
+<h3><a name="file_save_as">Save As...</a></h3>
+    <p>
+    Save the current file with another file name.
+    The file format can be chosen by `File Types'. 
+    The number of formats displayed in `File Types' depends on the number of
+    plug-ins installed.
+    </p>
+    <p>
+    When you select `By Extension' in `File Types', the file format is
+    settled by the extension of the file name.
+    For example, the extension `.wav' means WAVE file format, `.aif' means
+    AIFF file format.
+    
+    When spave cannot detect the file format from the file name, use another
+    extension or select the desired file format in `File Types'.
+    You cannot save as the file format that is not displayed in `File Types'.
+    For example, 
+    if items such as ``MPEG 1.0 Layer III'' are not in the list,
+    you cannnot save as MP3 format.
+    </p>
+    
+<h3><a name="file_label">Label</a></h3>
+
+    <ul>
+    <li><a name="file_label_open">Open Label...</a><br>
+    Load a label file into the current window.
+
+    <li><a name="file_label_save">Save Label</a><br>
+    Overwrite labels of the current window to the original label file.
+    When the file name is not decided yet, it is same as <a
+    href="#file_label_save_as">Save Label As...</a>.
+
+    <li><a name="file_label_save_as">Save Label As...</a><br>
+    Save labels of the current window with another file name.
+
+    <li><a name="file_label_clear">Clear Label</a><br>
+    Clear labels of the current window.
+
+    <li><a name="file_region_label_open">Open Region Label...</a><br>
+    Load a region label file into the current window.
+
+    <li><a name="file_region_label_save">Save Region Label</a><br>
+    Overwrite region labels of the current window to the original region label file.
+    When the file name is not decided yet, it is same as <a
+    href="#file_region_label_save_as">Save Region Label As...</a>.
+
+    <li><a name="file_region_label_save_as">Save Region Label As...</a><br>
+    Save region labels of the current window with another file name.
+
+    <li><a name="file_region_label_clear">Clear Region Label</a><br>
+    Clear region labels of the current window.
+
+    </ul>
+    
+<h3><a name="file_print_target">Print Target</a></h3>
+    <p>
+    Select target printers or target file formats.
+    </p>
+
+<h3><a name="file_page_setup">Page Setup...</a></h3>
+    <p>
+    Open the page setup dialog.
+    </p>
+
+<h3><a name="file_print">Print...</a></h3>
+    <p>
+    Open the print dialog.
+    </p>
+
+    
+<h3><a name="file_close">Close</a></h3>
+    <p>
+    Close current window.
+    </p>
+    
+<h3><a name="file_exit">Exit</a></h3>
+    <p>
+    Quit spwave.
+    </p>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; File Menu
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2007-10-02 11:30:19 hideki"
+</p>
+</body> </html>

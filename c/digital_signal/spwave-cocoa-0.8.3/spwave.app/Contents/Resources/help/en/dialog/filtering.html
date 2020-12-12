@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Filtering Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="filtering">Filtering Dialog</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Filtering Dialog
+</p>
+
+
+<dl>
+<dt><a name="filter_type">Filter Type</a></dt>
+<dd>
+Type of the filter.
+Lowpass filter, highpass filter, bandpass filter, and bandstop filter can be used.
+</dd>
+
+<dt><a name="hp_cutoff">Highpass Cutoff</a></dt>
+<dd>
+Normalized cut-off frequency of a highpass filter.
+  1.0 means the Nyquist frequency (half of sampling frequency).
+Bigger value makes the wider frequency region cut off.
+The cutoff frequency in Hz is displayed in the drawing area on the left side of this dialog.
+
+This cutoff frequency must be lower in the bandpass filter case,
+higher in the bandstop filter case than <a href="#lp_cutoff">the lowpass cutoff</a>.
+
+</dd>
+
+<dt><a name="lp_cutoff">Lowpass Cutoff</a></dt>
+<dd>
+Normalized cut-off frequency of a lowpass filter.
+  1.0 means the Nyquist frequency (half of sampling frequency).
+  Smaller value makes the wider frequency region cut off.
+The cutoff frequency in Hz is displayed in the drawing area on the left side of this dialog.
+
+This cutoff frequency must be higher in the bandpass filter case
+lower in the bandstop filter case than <a href="#hp_cutoff">the highpass cutoff</a>.
+</dd>
+
+<dt><a name="sidelobe">Sidelobe</a></dt>
+<dd>
+Sidelobe height of filters.
+This parameter gives an amount of attenuation lower/higher than the cut-off
+frequency. A bigger value makes the amount of attenuation bigger.
+However, the bigger value sometimes requires more CPU power.
+</dd>
+
+<dt><a name="transition">Transition</a></dt>
+<dd>
+  Transition frequency width for filters in normalized frequency.
+  1.0 means the Nyquist frequency.
+  The bigger value makes the filters having more gentle slope.
+</dd>
+
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Filtering Dialog
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2005-10-24 12:17:11 hideki"
+</p>
+</body> </html>

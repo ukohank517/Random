@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Preference Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="preference">設定ダイアログ</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 設定ダイアログ
+</p>
+
+<h3><a name="file">ファイル</a></h3>
+
+<p>
+<a href="format.html">フォーマットダイアログ</a>が開いたときのデフォルトのフォーマットなどを指定します．
+</p>
+
+<dl>
+<dt><a name="use_default_format">読み込み時にデフォルトのフォーマットを使用</a></dt>
+<dd>
+ファイル形式が自動で判定できなかった場合に，フォーマットダイアログを開かずに，
+このダイアログで設定するフォーマットを強制的に使用します．
+</dd>
+
+<dt><a name="file_format">ファイルフォーマット</a></dt>
+<dd>ファイルフォーマットを指定します．
+フォーマットについての詳しいことは，<a href="../operation/basic.html#format">フォーマット</a>の所を参照して下さい．
+</dd>
+
+<dt><a name="file_bit">ビット/サンプル</a></dt>
+<dd>入力ファイルのビット/サンプルを指定します．
+  一昔前なら8ビットのファイルもあったのですが，最近であればほとんどが16ビットのファイルだと思います．
+  u-law，a-lawの場合はこの値に関係なく8ビットで読み込まれます．
+   spwaveでは，16ビット以下のファイルは内部的に全て16ビットに変換されて読み込まれます．    
+  <br>
+  小数点以下を含むテキストファイルのときには，64ビットを指定して下さい．
+</dd>
+
+<dt><a name="file_samp_rate">サンプリング周波数</a></dt>
+<dd>入力ファイルのサンプリング周波数を指定します．
+</dd>
+
+<dt><a name="file_channel">チャネル数</a></dt>
+<dd>入力ファイルのチャネル数を指定します．</dd>
+
+</dl>
+
+<h3><a name="look">外観</a></h3>
+
+<dl>
+  <dt><a name="look_look">外観</a></dt>
+  <dd>外観を選択します．
+  </dd>
+
+  <dt><a name="canvas_font">描画エリアのフォント</a></dt>
+  <dd>描画エリアのフォントを指定します．
+  </dd>
+
+  <dt><a name="window_size">ウィンドウサイズ</a></dt>
+  <dd>波形表示ウィンドウの大きさを指定します．
+「横の大きさ」x「縦の大きさ」という形式で指定します．
+  </dd>
+
+  <dt><a name="print_size">印刷サイズ</a></dt>
+  <dd>印刷時の表示の大きさを指定します．
+「横の大きさ」x「縦の大きさ」という形式で指定します．
+  </dd>
+
+  <dt><a name="info_area_width">情報エリアの幅</a></dt>
+  <dd>情報エリアの幅を指定します．
+  </dd>
+
+  <dt><a name="alt_ctrl_swap">ショートカットのAltキーとCtrlキーの入れ替え</a></dt>
+  <dd>ショートカットのAltキーとCtrlキーを入れ替えます．
+この設定は，spwaveを再起動してから有効になります．
+  </dd>
+
+  <dt><a name="scroll_left_by_wheel_down">ホイールダウンで左にスクロール</a></dt>
+  <dd>ホイールダウンで左にスクロールしたい場合にチェックを入れます．
+  
+  <dt><a name="use_tool_bar">ツールバーの使用</a></dt>
+  <dd>ツールバーを使用する場合にチェックを入れます．
+チェックが入っていない場合は，ツールバーが表示されません．
+  </dd>
+
+</dl>
+
+<h3><a name="display">表示</a></h3>
+
+<dl>
+  <dt><a name="display_meter">レベルメーターの表示</a></dt>
+  <dd>
+  レベルメーターを表示する場合にチェックを入れます．
+  </dd>
+  <dt><a name="draw_selection_times">選択範囲の時間の描画</a></dt>
+  <dd>
+  選択範囲の開始時間，終了時間を描画する場合にチェックを入れます．
+  </dd>
+  <dt><a name="draw_selection_length">選択範囲の長さの描画</a></dt>
+  <dd>
+  選択範囲の長さを描画する場合にチェックを入れます．
+  </dd>
+  <dt><a name="draw_scale">スケールの描画</a></dt>
+  <dd>
+  X軸とY軸の値を描画する場合にチェックを入れます．
+  </dd>
+  <dt><a name="draw_grid">グリッドの描画</a></dt>
+  <dd>
+  グリッドを描画する場合にチェックを入れます．
+  </dd>
+  <dt><a name="percent_amplitude">振幅をパーセントで表示</a></dt>
+  <dd>
+  振幅をパーセントで表示する場合にチェックを入れます．
+  </dd>
+</dl>
+
+
+<h3><a name="sound">サウンド</a></h3>
+
+<dl>
+<dt><a name="use_play_command">再生コマンドを強制的に使用</a></dt>
+<dd>
+常に再生コマンドを使用して音声の再生を行います．
+LinuxやWindowsなど一部の環境では，これにチェックが入っていないと再生コマンドは使用されません．
+</dd>
+
+<dt><a name="play_command">再生コマンド</a></dt>
+<dd>
+再生コマンドを入力します．
+再生コマンドを使用する場合は，長い再生区間の再生はできません．
+      <br>
+      再生コマンドのフォーマットとして，以下の変換文字列が使用できます．再生
+      コマンドは，16ビットリニアデータを再生できる必要があります．
+      <dl>
+	<dt><i>%F</i>, <i>%s</i>
+	<dd>
+	    ファイル名です．
+	    この場合，再生コマンドは，
+	    16ビットリニアのrawファイルを再生するものと仮定します．
+
+	<dt><i>%W</i>
+	<dd>
+	    ファイル名です．
+	    この場合，再生コマンドは，
+	    16ビットリニアのWavファイルを再生するものと仮定します．
+
+	<dt><i>%H</i>
+	<dd>
+	    単位がHzのサンプリング周波数です．
+
+	<dt><i>%K</i>
+	<dd>
+	    単位がkHzのサンプリング周波数です．
+	    
+	<dt><i>%C</i>
+	<dd>
+	    チャネル数です．
+	    これが指定されていない場合は，ステレオデータは再生されません．
+      </dl>
+      例：
+      <pre>
+      play_sound -f %H %F
+      </pre>
+      この例では再生コマンドとして"play_sound"というコマンドを用いており，
+      この"play_sound"というコマンドは，16ビットリニアrawファイルを再生し，
+      サンプリング周波数を-fオプションによりHz単位で指定するものとなっています．
+</dd>
+
+<dt><a name="audio_driver">オーディオドライバー</a></dt>
+<dd>オーディオドライバーを選択します．
+何も選択されていない場合は，デフォルトのドライバーを使用します．
+</dd>
+
+<dt><a name="audio_buffer_size">オーディオバッファー</a></dt>
+<dd>オーディオバッファーのサイズを選択します．
+環境によっては，この値は無視されます．
+</dd>
+
+<dt><a name="use_loop_play">デフォルトでループ再生を行う</a></dt>
+<dd>デフォルトでループ再生を行います．
+</dd>
+
+<dt><a name="use_sync_play">デフォルトで同期再生を行う</a></dt>
+<dd>デフォルトで同期再生を行います．
+</dd>
+
+<dt><a name="play_draw">再生中にカーソルを描画</a></dt>
+<dd>再生中にカーソルを描画します．
+</dd>
+
+<dt><a name="process_use_thread">処理にスレッドを使用</a></dt>
+<dd>処理にスレッドを使用します．
+スレッドを使用した場合に不安定になる場合はこのチェックを外して下さい．
+</dd>
+
+<dt><a name="use_lowlevel_thread">低レベルスレッドを使用</a></dt>
+<dd>低レベルスレッドを使用しない場合にチェックを外します．
+環境によってはこの項目は表示されません．
+スレッドが不安定な場合に，このチェックを外すと安定する場合があります．
+</dd>
+</dl>
+
+<h3><a name="label">ラベル</a></h3>
+
+<dl>
+<dt><a name="display_info_area">デフォルトで情報エリアを表示</a></dt>
+<dd>新しいウィンドウを開いたときに初期状態で情報エリアを表示します．
+</dd>
+
+<dt><a name="display_freq_info_area">情報エリアを周波数データに表示</a></dt>
+<dd>スペクトルなどの周波数データにも情報エリアを表示します．
+</dd>
+
+<dt><a name="link_region_label">選択されたラベルを現在の範囲にする</a></dt>
+<dd>選択されたラベルを現在の範囲にします．
+</dd>
+
+<dt><a name="erase_label_prompt">ラベルを削除する前に尋ねる</a></dt>
+<dd>ラベルを削除する前にダイアログを表示させたくない場合は，
+このチェックを外して下さい．ただし，<a 
+href="../menu/edit_menu.html#edit_undo">取り消し</a>は，ラベルの削除などには
+有効ではありませんので，注意して下さい．
+</dd>
+
+<dt><a name="load_default_label">同じディレクトリのデフォルトのラベルを読み込む</a></dt>
+<dd>音声ファイルと同じディレクトリにあるラベルを読み込みます．
+ただし，ファイル名が，音声ファイルの拡張子を<a
+href="#default_label_suffix">デフォルトのラベルの拡張子</a>に置き換えたものになっている場合に限ります．
+</dd>
+
+<dt><a name="default_label_suffix">デフォルトのラベルの拡張子</a></dt>
+<dd>デフォルトのラベルの拡張子を指定します．
+<a href="#load_default_label">同じディレクトリのデフォルトのラベルを読み込む</a>
+際に用いられます．
+</dd>
+
+</dl>
+
+
+<h3><a name="autosave">自動保存</a></h3>
+
+<dl>
+  <dt><a name="autosave_dir">自動保存先</a></dt>
+  <dd>  
+      デフォルトで保存されるディレクトリを示します．例えば，CD-ROMに
+      データがある場合など，元ファイルのあるディレクトリが書き込みできない場合に
+      便利です．
+  </dd>
+  <dt><a name="autosave_id_type">自動保存IDの種類</a></dt>
+  <dd>  
+      自動保存する際のファイル名をどうするかを決定します．
+      デフォルトは，「2-Digit Serial Number」であり，これは2桁の通し番号を示します．
+      この場合，01，02，03，... というIDがファイルの拡張子の前に付けられます．
+      同様に，3桁，4桁のものが用意されています．
+      また，「Edge Points」は，選択範囲の端点のポイントを示すもので，
+      選択範囲の開始点が1234で終了点が5678だった場合は，1234-5678というIDが付きます．
+  </dd>  
+  <dt><a name="autosave_id_prefix">IDのプリフィックス</a></dt>
+  <dd>
+      自動保存IDの前に付ける文字を設定します．
+      例えば，元のファイル名が，foo.wav で，
+      IDの種類が「2-Digit Serial Number」だった場合に，
+      プリフィックスに何も値がない場合は，foo01.wav，foo02.wav，...となり，
+      これが`_'だった場合は，foo_01.wav，foo_02.wav，...となります．
+  </dd>  
+  <dt><a name="autosave_label_suffix">ラベルの拡張子</a></dt>
+  <dd>
+      ログファイルの拡張子を指定します．
+      デフォルトでは「_cut.txt」となっています．元のファイル名が，foo.wavであった場合，foo_cut.txtとなります．
+  </dd>
+  <dt><a name="autosave_label_fullpath">ラベルファイルにフルパスを書き込む</a></dt>
+  <dd>
+      デフォルトでは，ログにはディレクトリ名を
+      取り除いたファイル名が書き込まれますので，それを変更したい場合は，これをチェックします．
+  </dd>
+  <dt><a name="autosave_by_drop">ドラッグ&amp;ドロップにより自動保存</a></dt>
+  <dd>
+  選択範囲をドラッグしてウィンドウの外にドロップしたとき，自動保存を行います．
+  </dd>
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 設定ダイアログ
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 02:08:48 hideki"
+</p>
+</body> </html>

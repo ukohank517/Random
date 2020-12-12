@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>FAQ: File</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="faq_file">File Related</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">FAQ</a> &gt; File Related
+</p>
+
+<dl>
+<dt><a name="mp3_output">I can't find the output plug-in for MP3. </a>
+<dd> 
+  I don't include the output plug-in in the spwave package and don't
+  distribute the binary version of the output plug-in to avoid patent-related
+  problems. If you live in Japan, you can download it at <a
+  href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/spwave/download-j.html">Japanese
+  page</a> for research or educational use. Of cource, the page is written in
+  Japanese :-) 
+<br>[From version 0.5]
+  
+<dt><a name="longfile">Very long files cannot be loaded. Why?</a>
+<dd> Because spwave will load all data in memory until version 0.4.
+  If an amount of memory is not sufficient, the data cannot be loaded.
+  <br>[Until version 0.4]
+  <br>
+  Version 0.5 supports loading very long files. Conversely, all files are
+  loaded from files directly. So, spwave may be crushed, if you modify the
+  file that has been loaded by spwave.
+  <br>[From version 0.5]
+
+<dt><a name="file_read">No files can be loaded. Why?<a/>
+<dd> spwave from version 0.5 uses plug-ins for reading and writing files.
+  If the plug-ins provided by <a href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/index.html#spPlugin" 
+  target="_top">spPlugin</a> is not installed correctly, spwave cannot read
+  and write files at all. In this case, you should install spPlugin into
+  the proper directory.
+  The plug-ins also doesn't work, if the version of `libc' of the plug-ins is
+  different from that of spwave on Linux, or the version of the plug-ins is too old.
+  <br>
+  
+  spwave searches for plug-ins 
+  <code>~/.sp_plugins</code>, <code>/usr/lib/sp/plugins</code>,
+  <code>/usr/local/lib/sp/plugins</code>
+  in this order. The <code>~/</code> on Windows and Mac OS means the directory that
+  the executable binary is holded. If <code>HOMEPATH</code> on Window or
+  <code>HOME</code> on Mac OS is set, the directory is also searched.
+  
+  <br>[From version 0.5]
+  
+</dl>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">FAQ</a> &gt; File Related
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 01:04:20 hideki"
+</p>
+</body>
+</html>

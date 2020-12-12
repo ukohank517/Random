@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Analysis Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="analysis_preference">Analysis Dialog</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Analysis Dialog
+</p>
+
+
+<h3><a name="analysis_parameter">Parameters</a></h3>
+
+<dl>
+<dt><a name="analysis_type">Analysis Type</a></dt>
+<dd>The following analysis types can be chosen.
+<ul>
+<li>Spectrum: Normal amplitude spectrum (power spectrum).</li>
+<li>Smoothed Spectrum: Smoothed spectrum by cepstrum liftering. 
+Smaller value of lifter length generates smoother spectrum.
+</li>
+<li>Phase: Phase spectrum.</li>
+<li>Unwrapped Phase: Unwrapped phase spectrum. The phase spectrum is
+unwrapped so that the spectrum is continuous.</li>
+<li>Group Delay: Group delay spectrum.</li>
+<li>Cepstrum: Cepstrum.</li>
+<li>Smoothed Group Delay: Smoothed group delay spectrum. The smaller lifter length
+makes the group delay spectrum smoother.</li>
+<li>Time-Domain Group Delay: Inverse FFT of group delay spectrum.</li>
+</ul>
+
+</dd>
+    
+<dt><a name="analysis_window_type">Window Type</a></dt>
+<dd>The following types are supported.
+<ul>
+<li>Hamming: Hamming window.
+<li>Hanning: Hanning window.
+<li>Blackman: Blackman window.
+<li>Gauss: Gauss window.
+</ul>
+</dd>
+
+<dt><a name="analysis_lifter">Lifter Length</a></dt>
+<dd>
+    Lifter length for cepstrum analysis.
+    A small value makes the spectrum smoother.
+    This value is valid when analysis type is ``Smoothed Spectrum'' or ``Smoothed Group Delay''.
+</dd>
+    
+</dl>
+
+<h3><a name="analysis_attribute">Attribute</a></h3>
+
+<dl>
+<dt><a name="analysis_new_window">Always make a new window</a></dt>
+<dd>Always make a new window in analysis. The check is turned off, one window
+will be reused for one audio file.
+</dd>
+
+<dt><a name="analysis_linear_spectrum">Use a linear spectrum (not use decibel)</a></dt>
+<dd>
+Use a linear spectrum instead of a decibel spectrum.
+</dd>
+
+<dt><a name="analysis_normalize_spectrum">Display a normalized spectrum</a></dt>
+<dd>
+Display a normalized spectrum. 
+When the check is turned off, the spectrum will be calculated from the raw
+waveform value.
+</dd>
+
+<dt><a name="analysis_normalize_spectrum_max">Normalization with a waveform's maximum</a></dt>
+<dd>
+Normalize spectrum with a waveform's maximum value.
+</dd>
+
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Analysis Dialog
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2004-07-19 03:46:19 hideki"
+</p>
+</body> </html>

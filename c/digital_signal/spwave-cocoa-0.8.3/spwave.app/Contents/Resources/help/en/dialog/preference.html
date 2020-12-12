@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Preference Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="preference">Preference Dialog</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Preference Dialog
+</p>
+
+<h3><a name="file">File</a></h3>
+
+<p>
+Setting a default format when <a href="format.html">Format Dialog</a> appears, etc.
+</p>
+
+<dl>
+<dt><a name="use_default_format">Use the default format in reading</a></dt>
+<dd>
+Turn on if you want to use the default format specified in this dialog
+forcedly when spwave cannot detect the format automatically.
+</dd>
+
+<dt><a name="file_format">File Format</a></dt>
+<dd>File format. For more information, see  <a
+href="../operation/basic.html#format">Format</a> section.
+</dd>
+
+<dt><a name="file_bit">Bits/Sample</a></dt>
+<dd>Bits per sample of the input file.
+    When the selected file format is u-law or a-law, this value is ignored.
+    spwave converts bits/sample into 16 bits/sample internally when the file
+    has a bits/sample lower than 16 bits.
+  <br>
+    Select 64, if the file includes floating point numbers.
+</dd>
+
+<dt><a name="file_samp_rate">Sampling Frequency</a></dt>
+<dd>Sampling frequency of the input file.
+</dd>
+
+<dt><a name="file_channel">Number of Channels</a></dt>
+<dd>Number of channels of the input file.</dd>
+
+</dl>
+
+
+<h3><a name="look">Look</a></h3>
+<dl>
+  <dt><a name="look_look">Look</a></dt>
+  <dd>Select the look of the waveform area.
+  </dd>
+
+  <dt><a name="canvas_font">Font for main canvas</a></dt>
+  <dd>Specify a font of the main canvas.
+  </dd>
+
+  <dt><a name="window_size">Window Size</a></dt>
+  <dd>Specify the size of the waveform area.
+  The format is `Width' x `Height'.
+  </dd>
+
+  <dt><a name="print_size">Print Size</a></dt>
+  <dd>Specify the size of printing.
+  The format is `Width' x `Height'.
+  </dd>
+
+  <dt><a name="info_area_width">Information area width</a></dt>
+  <dd>Specifia the width of the information area.
+  </dd>
+
+  <dt><a name="alt_ctrl_swap">Swap Alt key and Ctrl key of shortcuts</a></dt>
+  <dd>Turn on if you want to swap the alt key and the ctrl key of shortcuts.
+  This setting takes effect after restarting.
+  </dd>
+
+  <dt><a name="scroll_left_by_wheel_down">Scroll left by wheel down</a></dt>
+  <dd>Turn on if you want to scroll left by wheel down of a mouse.
+  
+  <dt><a name="use_tool_bar">Use a tool bar</a></dt>
+  <dd>Turn on if you want to use a tool bar.
+  </dd>
+
+</dl>
+
+<h3><a name="display">Display</a></h3>
+
+<dl>
+  <dt><a name="display_meter">Display a level meter</a></dt>
+  <dd>
+  Turn on if you want to display a level meter.
+  </dd>
+  <dt><a name="draw_selection_times">Draw times of a selected region</a></dt>
+  <dd>
+  Turn on if you want to draw times of a selected region.
+  </dd>
+  <dt><a name="draw_selection_length">Draw a length of a selected region</a></dt>
+  <dd>
+  Turn on if you want to draw a length of a selected region.
+  </dd>
+  <dt><a name="draw_scale">Draw a scale</a></dt>
+  <dd>
+  Turn on if you want to draw a scale.
+  </dd>
+  <dt><a name="draw_grid">Draw a grid</a></dt>
+  <dd>
+  Turn on if you want to draw a grid.
+  </dd>
+  <dt><a name="percent_amplitude">Display amplitude in percent</a></dt>
+  <dd>
+  Turn on if you want to display amplitude in percent.
+  </dd>
+</dl>
+
+
+<h3><a name="sound">Sound</a></h3>
+
+<dl>
+<dt><a name="use_play_command">Use the play command forcedly</a></dt>
+<dd>
+Turn on if you want to use the play command forcedly.
+The play command is not valid on some enviroments such as Linux, Windows, etc. unless this item is checked.
+</dd>
+
+<dt><a name="play_command">Play command</a></dt>
+<dd>
+Specify the play command.
+When you use the play command, the long region cannot be played.
+      <br>
+      The command can include the following control characters.
+      <dl>
+	<dt><i>%F</i>, <i>%s</i>
+	<dd>
+	File name.
+	The file is regarded as 16 bit linear raw file.
+
+	<dt><i>%W</i>
+	<dd>
+	WAVE file name.
+	The file is regarded as 16 bit linear WAVE format.
+
+	<dt><i>%H</i>
+	<dd>
+	Sampling frequency in Hz.
+
+	<dt><i>%K</i>
+	<dd>
+	Sampling frequency in kHz.
+	    
+	<dt><i>%C</i>
+	<dd>
+	Number of channels.
+	The stereo file cannot be played without this character.
+      </dl>
+      Example:
+      <pre>
+      play_sound -f %H %F
+      </pre>
+      In this example, the play command is "play_sound" which recognizes
+      a sampling frequency in Hz through -f option and can play a 16 bit
+      linear raw file.
+</dd>
+
+<dt><a name="audio_driver">Audio driver</a></dt>
+<dd>Select the audio driver.
+When nothing is selected, the default audio driver will be used.
+</dd>
+
+<dt><a name="audio_buffer_size">Audio buffer size</a></dt>
+<dd>Specify the audio buffer size.
+Some environments ignore this value.
+</dd>
+
+<dt><a name="use_loop_play">Use loop play as default</a></dt>
+<dd>Turn on if you want to use loop play as default.
+</dd>
+
+<dt><a name="use_sync_play">Use synchronous play as default</a></dt>
+<dd>Turn on if you want to use synchronous play as default.
+</dd>
+
+<dt><a name="play_draw">Draw a cursor on playing</a></dt>
+<dd>Turn on if you want to draw a cursor on playing.
+</dd>
+
+<dt><a name="process_use_thread">Use threads for processing</a></dt>
+<dd>Turn on if you want use threads for processing.
+If the thread processing makes spwave unstable, uncheck this item.
+</dd>
+
+<dt><a name="use_lowlevel_thread">Use low level threads</a></dt>
+<dd>Turn on if you want use lowlevel threads for processing.
+This item is not displayed in some environments.
+If the non-lowlevel thread processing makes spwave unstable, uncheck this item.
+</dd>
+
+</dl>
+
+
+<h3><a name="label">Label</a></h3>
+<dl>
+<dt><a name="display_info_area">Display the information area as default</a></dt>
+<dd>Turn on if you want to display the information area as default in opening a new window.
+</dd>
+
+<dt><a name="display_freq_info_area">Display the information area for frequency data</a></dt>
+<dd>Turn on if you want to display the information area for frequency data.
+</dd>
+
+<dt><a name="link_region_label">Link a selected label to a selection</a></dt>
+<dd>Turn on if you want to link a selected label to a selection.
+</dd>
+
+<dt><a name="erase_label_prompt">Always ask before erasing a label</a></dt>
+<dd>Turn on if you want to display a dialog before erasing a label.
+If you don't want to display the dialog, turn off this item.
+Please be careful because <a 
+href="../menu/edit_menu.html#edit_undo">undo</a> function doesn't take effect for erasing labels.
+</dd>
+
+<dt><a name="load_default_label">Load the default label file in the file directory</a></dt>
+<dd>Load the default label in the directory that the file to be opened is included.
+The label file name must be same as the sound file in the name body, and be
+replaced with <a href="#default_label_suffix">default label file extension</a>
+in the extension.
+</dd>
+
+<dt><a name="default_label_suffix">Default label file suffix</a></dt>
+<dd>Default suffix of the label file which is used in 
+<a href="#load_default_label">loading the default label file in the file directory</a>.
+</dd>
+
+</dl>
+
+
+<h3><a name="autosave">Autosave</a></h3>
+<dl>
+  <dt><a name="autosave_dir">Autosave directory</a></dt>
+  <dd>  
+  Directory to save the extracted file.
+  This setting is useful when the input data is in the directory that cannot
+  be written into, e.g. CD-ROM directory.
+  </dd>
+
+  <dt><a name="autosave_id_type">Autosave ID type</a></dt>
+  <dd>  
+  This ID is the naming strategy of output files.
+  Default value is ``2-Digit Serial Number'' such as 01, 02, 03, .... 
+  The 3-digit and 4-digit serial numbers are also available.
+  ``Edge Points'' setting adds ID ``1234-5678'' to the file name when the
+  selection starts from 1234 and ends at 5678.
+  </dd>  
+
+  <dt><a name="autosave_id_prefix">Prefix of autosave ID</a></dt>
+  <dd>
+  Select prefix of autosave ID.
+  For example, when the original file name is foo.wav and ID type is ``2-Digit
+  Serial Number'', foo01.wav, foo02.wav, ... will be generated by no prefix
+  setting, foo_01.wav, foo_02.wav, ... will be generated by prefix `_'.
+  </dd>  
+
+  <dt><a name="autosave_label_suffix">Label file suffix</a></dt>
+  <dd>
+      Suffix of the log file.
+      The default value is `_cut.txt'. In this case, `foo_cut.txt' is used
+      for the original file `foo.wav'.
+  </dd>
+
+  <dt><a name="autosave_label_fullpath">Write the full path into a label file</a></dt>
+  <dd>
+      The file name in the log file is not a full path as default.
+      If you want to change this attribute, check here.
+  </dd>
+
+  <dt><a name="autosave_by_drop">Autosave by drag &amp; drop</a></dt>
+  <dd>
+  Turn on if you want to autosave by drag &amp; drop.
+  </dd>
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Preference Dialog
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 02:08:27 hideki"
+</p>
+</body> </html>

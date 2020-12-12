@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Analysis Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="analysis_preference">分析の設定</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 分析の設定
+</p>
+
+<p>
+分析に用いるパラメータの設定を行います．
+必要なパラメータを変更してOKか適用を押します．
+適用を押すと，現在分析を行っているウィンドウ全てに設定が適用されます．
+ダイアログは開いたままでもspwaveの操作を継続できます．
+</p>
+
+<h3><a name="analysis_parameter">パラメータ</a></h3>
+
+<dl>
+<dt><a name="analysis_type">分析の種類</a></dt>
+<dd>分析の種類を選択します．以下の種類が選択できます．
+<ul>
+<li>Spectrum: 通常の振幅スペクトル（パワースペクトル）です．</li>
+<li>Smoothed Spectrum: 平滑化スペクトルです．
+ケプストラムによる平滑化が行われます．リフタ長の値が小さいほどスペクトルが滑らかになります．</li>
+<li>Phase: 位相スペクトルです．</li>
+<li>Unwrapped Phase: アンラップド位相スペクトルです．
+位相の値が連続的な値になるように処理されています。</li>
+<li>Group Delay: 群遅延スペクトルです．</li>
+<li>Cepstrum: ケプストラムです．</li>
+<li>Smoothed Group Delay: 群遅延スペクトルを平滑化したものです．
+リフタ長の値が小さいほどスペクトルが滑らかになります．</li>
+<li>Time-Domain Group Delay: 群遅延スペクトルを逆フーリエ変換したものです．</li>
+</ul>
+</dd>
+    
+<dt><a name="analysis_window_type">分析窓の種類</a></dt>
+<dd>分析窓の種類を選択します．
+<ul>
+<li>Hamming: ハミング窓です．
+<li>Hanning: ハニング窓です．
+<li>Blackman: ブラックマン窓です．
+<li>Gauss: ガウス窓です．
+</ul>
+</dd>
+
+<dt><a name="minimum_fft_length">最小のFFT長</a></dt>
+<dd>最小のFFT長です．分析の際には，これ以上のFFT長が、必要に応じてゼロ詰めして使用されます．
+</dd>
+
+<dt><a name="maximum_fft_length">最大のFFT長</a></dt>
+<dd>最大のFFT長です．これ以上長いFFT長を使用する分析を行うことができません。
+</dd>
+
+<dt><a name="analysis_lifter">リフタ長</a></dt>
+<dd>
+    ケプストラム分析に用いられるリフタの長さを指定します．
+    値が小さいほどスペクトルが滑らかになります．
+    分析の種類が「Smoothed Spectrum」か「Smoothed Group Delay」の場合に使用されます．
+</dd>
+    
+</dl>
+
+<h3><a name="analysis_attribute">動作</a></h3>
+
+<dl>
+<dt><a name="analysis_new_window">常に新しいウィンドウを作成</a></dt>
+<dd>分析したときに常に新しいウィンドウを作成します．
+チェックがオフの場合は，一つの音声ファイルに対して一つのウィンドウが作成されます．
+</dd>
+
+<dt><a name="analysis_linear_spectrum">スペクトルにデシベルを使わない</a></dt>
+<dd>
+スペクトルを表示する際にデシベルを使用しません．
+</dd>
+
+<dt><a name="analysis_normalize_spectrum">正規化したスペクトルを表示</a></dt>
+<dd>
+音声波形の取り得る最大値で正規化したスペクトルを表示します。
+チェックが入っていない場合は，波形の生（raw）の値からスペクトルを計算します．
+</dd>
+
+<dt><a name="analysis_normalize_spectrum_max">波形の最大値での正規化</a></dt>
+<dd>
+スペクトルを波形の最大値で正規化します．
+</dd>
+
+</dl>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; 分析の設定
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2004-07-18 14:01:42 hideki"
+</p>
+</body> </html>

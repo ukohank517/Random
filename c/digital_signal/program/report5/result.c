@@ -1,0 +1,274 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+
+float function(float u){
+  return 1/(1+exp(-u));
+}
+
+float diff_function(float u){
+  return (1-function(u))*function(u);
+}
+
+int main()
+{
+  char class1_name[128]="class1.dat";
+  char class2_name[128]="class2.dat";
+  char test_file[128]="test.dat";
+  char result_y1[128]="result_1.dat";
+  char result_y2[128]="result_2.dat";
+  char error_file[128]="error.dat";
+  char out_node1[128]="y1.dat";
+  char out_node2[128]="y2.dat";
+  float cls[200];
+  float clss[140];
+  float class1_x[2][100],class2_x[2][100];
+  float class1_y[2][100],class2_y[2][100];
+  float test_x[2][200],test_y[2][200];
+
+  float class1_d[2],class2_d[2];
+  float w1[2][2],w2[2][2],n_w1[2][2],n_w2[2][2],sum;
+
+  float class1_uj[2],class1_uk[2],class1_gj[2];
+  float class2_uj[2],class2_uk[2],class2_gj[2];
+  float test_uj[2],test_uk[2],test_gj[2];
+  float err[500];
+  
+  int num_update;
+  
+  int n,i,j,k;
+  FILE *file_input;
+  FILE *file_output;
+
+  //class1を読み込んで、それをclass1_xに代入する。
+  if((file_input=fopen(class1_name,"rb"))==NULL){
+    fprintf(stderr,"cannot read %s. \n",class1_name);exit(-1);
+  }
+  fread(cls,sizeof(float),200,file_input);
+  fclose(file_input);
+  for(i=0;i<100;i++){
+    for(j=0;j<2;j++){
+      class1_x[j][i]=cls[i*2+j];
+    }
+  }
+  //class2を読み込んで、それをclass2_xに代入する。
+  if((file_input=fopen(class2_name,"rb"))==NULL){
+    fprintf(stderr,"cannot read %s. \n",class2_name);exit(-1);
+  }
+  fread(cls,sizeof(float),200,file_input);
+  fclose(file_input);
+  for(i=0;i<100;i++){
+    for(j=0;j<2;j++){
+      class2_x[j][i]=cls[i*2+j];
+    }
+  }
+
+  //testを読み込んで、それをtest_xに代入する。
+  if((file_input=fopen(test_file,"rb"))==NULL){
+    fprintf(stderr,"cannot read %s. \n",test_file);exit(-1);
+  }
+  n=fread(clss,sizeof(float),140,file_input);
+  fclose(file_input);
+  //printf("%d\n",n);
+  for(i=0;i<70;i++){
+    for(j=0;j<2;j++){
+      test_x[j][i]=clss[i*2+j];
+      printf("%lf\t",test_x[j][i]);
+    }
+    printf("\n");
+  }
+
+
+  
+  //実行する度に違う乱数を得られる。信憑性を高まる。
+  srand((unsigned)time(NULL));
+  //w1の初期化
+  sum=0.0;
+  for(i=0;i<2;i++){
+    for(j=0;j<2;j++){
+      w1[i][j]=0.1*(double)rand()/RAND_MAX;
+      sum+=w1[i][j];
+    }
+  }
+  sum=sum/4;//乱数の平均を求める。
+  for(i=0;i<2;i++){
+    for(j=0;j<2;j++){
+      w1[i][j]=w1[i][j]-sum;//平均を0にするために
+    }
+  }
+  //w2の初期化
+  sum=0.0;
+  for(i=0;i<2;i++){
+    for(j=0;j<2;j++){
+      w2[i][j]=0.1*(double)rand()/RAND_MAX;
+      sum+=w2[i][j];
+    }
+  }
+  sum=sum/4;//乱数の平均を求める。
+  for(i=0;i<2;i++){
+    for(j=0;j<2;j++){
+      w2[i][j]=w2[i][j]-sum;//平均を0にするために      
+    }
+  }
+  //教師信号の初期化
+  class1_d[1-1]=1;//class1のd[1]
+  class1_d[2-1]=0;//class1のd[2]
+  class2_d[1-1]=0;//class2のd[1]
+  class2_d[2-1]=1;//class2のd[2]
+
+  for(num_update=0;num_update<500;num_update++){
+    for(i=0;i<2;i++){
+      for(j=0;j<2;j++){
+	n_w1[i][j]=w1[i][j];
+	n_w2[i][j]=w2[i][j];
+      }
+    }
+    err[num_update]=0.0;
+    for(n=0;n<100;n++){
+      //変数の初期化
+      for(i=0;i<2;i++){
+	class1_uj[i]=0;	class2_uj[i]=0;
+	class1_uk[i]=0; class2_uk[i]=0;
+	class1_gj[i]=0; class2_gj[i]=0;
+		
+      }
+      //重みが変わる時に変数の変化
+      for(j=0;j<2;j++){
+	for(i=0;i<2;i++){
+	  class1_uj[j]+=w1[j][i]*class1_x[i][n];
+	  class2_uj[j]+=w1[j][i]*class2_x[i][n];
+	}
+	class1_gj[j]=function(class1_uj[j]);
+	class2_gj[j]=function(class2_uj[j]);
+      }
+      for(k=0;k<2;k++){
+	for(j=0;j<2;j++){
+	  class1_uk[k]+=w2[k][j]*class1_gj[j];
+	  class2_uk[k]+=w2[k][j]*class2_gj[j];
+	}
+	class1_y[k][n]=function(class1_uk[k]);
+	class2_y[k][n]=function(class2_uk[k]);
+      }
+      err[num_update]+=(class1_y[0][n]-class1_d[0])*(class1_y[0][n]-class1_d[0])+(class1_y[1][n]-class1_d[1])*(class1_y[1][n]-class1_d[1]);
+      err[num_update]+=(class2_y[0][n]-class2_d[0])*(class2_y[0][n]-class2_d[0])+(class2_y[1][n]-class2_d[1])*(class2_y[1][n]-class2_d[1]);
+
+      //2-3層の間の重みw2を更新
+      for(k=0;k<2;k++){
+	for(j=0;j<2;j++){
+
+
+	  n_w2[k][j]+=0.005*(class1_d[k]-class1_y[k][n])*diff_function(class1_uk[k])*class1_gj[j];
+	  n_w2[k][j]+=0.005*(class2_d[k]-class2_y[k][n])*diff_function(class2_uk[k])*class2_gj[j];
+	}
+      }
+      //1-2層の間の重みw1を更新
+      for(j=0;j<2;j++){
+	for(i=0;i<2;i++){
+	  sum=0;
+	  for(k=0;k<2;k++){
+	    sum+=(class1_d[k]-class1_y[k][n])*diff_function(class1_uk[k])*w2[k][j];
+	  }
+	  n_w1[j][i]+=0.005*sum*diff_function(class1_uj[j])*class1_x[i][n];
+	  
+	  
+	  sum=0;
+	  for(k=0;k<2;k++){
+	    sum+=(class2_d[k]-class2_y[k][n])*diff_function(class2_uk[k])*w2[k][j];
+	  }
+	  n_w1[j][i]+=0.005*sum*diff_function(class2_uj[j])*class2_x[i][n];
+
+	}
+      }
+      
+    }
+    //更新した重みn_wをwに代入する
+    for(i=0;i<2;i++){
+      for(j=0;j<2;j++){
+	w1[i][j]=n_w1[i][j];
+	w2[i][j]=n_w2[i][j];
+	
+      }
+    }
+  }
+  //誤差を保存する
+  if((file_output = fopen(error_file,"w")) == NULL){
+    fprintf(stderr, "Cannot write %s\n", error_file);  exit(-1);
+  }
+  for(n=0;n<500;n++){
+    fprintf(file_output,"%lf \n",err[n]); 
+  }
+  fclose(file_output);
+  //ノードのy1値をoutputする
+  if((file_output = fopen(out_node1,"w")) == NULL){
+    fprintf(stderr, "Cannot write %s\n", out_node1);  exit(-1);
+  }
+  for(n=0;n<200;n++){
+    if(n<100){
+      fprintf(file_output,"%lf \n",class1_y[0][n]); 
+    }
+    else{
+      fprintf(file_output,"%lf \n",class2_y[0][n-100]); 
+    }
+  }
+  fclose(file_output);
+  //ノードのy2値をoutputする
+  if((file_output = fopen(out_node2,"w")) == NULL){
+    fprintf(stderr, "Cannot write %s\n", out_node2);  exit(-1);
+  }
+  for(n=0;n<200;n++){
+    if(n<100){
+      fprintf(file_output,"%lf \n",class1_y[1][n]); 
+    }
+    else{
+      fprintf(file_output,"%lf \n",class2_y[1][n-100]); 
+    }
+  }
+  fclose(file_output);
+
+
+  //テストデータの出力を計算
+  for(n=0;n<70;n++){
+    for(i=0;i<2;i++){
+      test_uj[i]=0;
+      test_uk[i]=0;
+      test_gj[i]=0;	
+    }
+
+    //重みが変わる時に変数の変化
+    for(j=0;j<2;j++){
+      for(i=0;i<2;i++){
+	test_uj[j]+=w1[j][i]*test_x[i][n];
+      }
+      test_gj[j]=function(test_uj[j]);
+    }
+    for(k=0;k<2;k++){
+      for(j=0;j<2;j++){
+	test_uk[k]+=w2[k][j]*test_gj[j];
+      }
+      test_y[k][n]=function(test_uk[k]);
+    }
+  }
+  //テスト出力のy1値をoutputする
+  if((file_output = fopen(result_y1,"w")) == NULL){
+    fprintf(stderr, "Cannot write %s\n", result_y1);  exit(-1);
+  }
+  for(n=0;n<70;n++){
+    fprintf(file_output,"%lf \n",test_y[0][n]); 
+  }
+  fclose(file_output);
+
+  //テスト出力のy2値をoutputする
+  if((file_output = fopen(result_y2,"w")) == NULL){
+    fprintf(stderr, "Cannot write %s\n", result_y2);  exit(-1);
+  }
+  for(n=0;n<70;n++){
+    fprintf(file_output,"%lf \n",test_y[1][n]); 
+  }
+  fclose(file_output);
+
+  
+  return 0;
+}  
+    
+

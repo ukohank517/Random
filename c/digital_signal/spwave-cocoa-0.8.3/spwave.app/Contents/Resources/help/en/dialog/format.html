@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Format Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="format">Format Dialog</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Format Dialog
+</p>
+
+<p>
+This dialog will be displayed when spwave cannot detect a format of the
+file automatically. spwave considers the file as a raw file or a text file.
+Since raw files cannot include information of the data such as sampling frequency
+, number of channels, and bits/sample, you have to select this type of information.
+</p>
+<p>
+Some file formats such as WAV, AIFF and MP3 can select a type of a codec. If spwave doesn't recognize
+the codec, this dialog is also displayed. 
+</p>
+
+<dl>
+<dt><a name="format_format">File Format</a></dt>
+<dd>
+  Type of file format. For more information, see <a
+    href="../operation/basic.html#format">File Formats</a>.
+</dd>
+
+<dt><a name="format_bit">Bits/Sample</a></dt>
+<dd>Bits per sample of the input file.
+    When the selected file format is u-law or a-law, this value is ignored.
+    spwave converts bits/sample into 16 bits/sample internally when the file
+    has a bits/sample lower than 16 bits.
+  <br>
+    Select 64, if the file includes floating point numbers.
+</dd>
+
+<dt><a name="format_samp_rate">Sampling Frequency</a></dt>
+<dd>Sampling frequency of the input file.
+</dd>
+
+<dt><a name="format_channel">Number of Channels</a></dt>
+<dd>Number of channels of the input file.
+</dd>
+
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Format Dialog
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 15:27:29 hideki"
+</p>
+</body> </html>

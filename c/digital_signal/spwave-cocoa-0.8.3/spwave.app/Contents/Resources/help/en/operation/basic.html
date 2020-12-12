@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Basic Operation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="basic">Basic Operation</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Operation</a> &gt; Basic Operation
+</p>
+
+
+<p>
+Basic operation of spwave is explained here.
+Control+click and Option+click on Mac OS mean clicking the right buttton
+and the middle button, respectively.
+</p>
+
+<h3><a name="execution">Execution</a></h3>
+
+<p>
+Windows and Mac OS version will start with double-clicking on the executable
+binary. You can run the Linux version with following command.
+</p>
+<pre>
+spwave [options...] [filename...]
+</pre>
+<p>
+spwave accepts some command-line options. For delailed information, see
+<a href="options.html">command-line options</a>.
+</p>
+
+<p>
+Linux version will
+display help messages with "-help" option. While the Windows version will not
+show such help, command-line options have effect on the program. Almost all
+of these parameters also can be set by the preference dialog. Mac OS version
+does not support command-line options.
+</p>
+
+<h3><a name="window">Window</a></h3>
+
+<p>
+The window of spwave consists of the following areas.
+</p>
+<ul>
+  <li>Menu Bar<br>
+  Almost all functions can be accessed from here.
+  Please see <a href="../menu/list.html">Menu Reference</a> for detailed information.
+      
+  <li>Tool Bar<br>
+  Many functions used frequently can be accessed from here.
+      
+  <li>Waveform Area<br>
+
+      Speech waveform will be displayed in this area.
+      When you choose some analysises, this area displays spectrum.
+      <a href="#region">Selecting a region</a> can be done in this area.
+      <br>
+      The amplitude of waveform is displayed in raw value.
+      Version 0.6.9+ can display the amplitude in percentages.
+            
+      <br>
+      You can execute some functions by
+      <a href="../menu/popup_menu.html">Popup menu</a> displayed by clicking the right button.
+      
+  <li>Cursor<br>
+
+  Moving the mouse in the waveform area displays the cursor indicating the
+  current time location.
+  The time location of the cursor and the waveform amplitude in the location
+  are shown in the waveform area.
+  <br>
+  Some edit operations will be executed to this cursor location.
+      
+  <li>Overview Area<br>
+
+      The overview area placed above the waveform area shows a whole waveform of the current file.
+      This area is added in version 0.6.8.
+      For more information, see <a href="#overview">Overview Area</a>.
+      <p>
+      
+  <li>Information Area<br>
+      This area in current version displays information about labels in the
+      righthand side of the waveform area.
+      You can show/hide this area by checking/unchecking <a
+      href="../menu/view_menu.html#view_display_info_area">Display Information Area</a>.
+</ul>    
+
+
+<h3><a name="file_open">Opening Files</a></h3>
+
+<p>
+If you choose <a href="../menu/file_menu.html#file_open">Open...</a> menu in File menu, a dialog box to select
+file will popup. The data format of the selected file will be autodetected
+when it is a supported format. Otherwise, a dialog box to select data format
+will popup, select suitable format.
+</p>
+<p>
+Version 0.5.2+ supports opening files by drag &amp; drop. 
+Dropping files on spwave icon on Mac OS or dropping files on a waveform
+window on other platforms can open files.
+Motif version doesn't support this function.
+</p>
+
+<h3><a name="file_save">Saving Files</a></h3>
+    <p>
+    Saving files can be executed by <a
+    href="../menu/file_menu.html#file_save">Save</a> in File menu.
+    If you want save the file with a different file name, use 
+    <a href="../menu/file_menu.html#file_save_as">Save As...</a>.
+    The file format in Save As can be chosen by `File Types'. 
+    The number of formats displayed in `File Types' depends on the number of
+    plug-ins installed.
+    </p>
+    <p>
+    When you select `By Extension' in `File Types', the file format is
+    settled by the extension of the file name.
+    For example, the extension `.wav' means WAVE file format, `.aif' means
+    AIFF file format.
+    
+    When spave cannot detect the file format from the file name, use another
+    extension or select the desired file format in `File Types'.
+    You cannot save as the file format that is not displayed in `File Types'.
+    For example, 
+    if items such as ``MPEG 1.0 Layer III'' are not in the list,
+    you cannnot save as MP3 format.
+    </p>
+
+
+<h3><a name="format">File Formats</a></h3>
+
+<p>
+Currently, spwave supports the following file formats.
+These formats can be specified by command-line options or 
+<a href="../dialog/format.html">Format Dialog</a>.
+The other file formats supported by spwave such as WAVE, AIFF, etc. can be
+detected automatically.
+
+<a href="options.html#option_format"><b>-format options</b></a>
+changes the format setting in command line. In the command-line options, 
+names in the parenthesises can be specified.
+</p>
+
+<dl>
+  <dt><i>Raw (raw)</i>
+  <dd>
+  Binary data with a native byte order.
+  When this value makes the waveform like noise, try <i>Swap Raw</i>.
+      <p>
+      
+  <dt><i>Swap Raw (swap)</i>
+  <dd>
+  Binary data with a swapped native byte order.
+      <p>
+      
+  <dt><i>Little Endian (little)</i>
+  <dd>
+  Binary data with a little endian byte order.
+  Linux (i386), DEC Alpha, Windows, etc. uses this byte order.
+      <p>
+      
+  <dt><i>Bit Endian (big)</i>
+  <dd>
+  Binary data with a big endian byte order.
+Sun SPARC, Macintosh, etc. uses this byte order.
+      <p>
+      
+  <dt><i>U-law (ulaw)</i>
+  <dd>
+      u-law binary data. The bits/sample are always 8.
+      <p>
+      
+  <dt><i>A-law (alaw)</i>
+  <dd>
+      a-law binary data. The bits/sample are always 8.
+      <p>
+      
+  <dt><i>Text (text)</i>
+  <dd>
+  Text file. The data format is considered that each line has one value.
+  The character `#' means a comment. So, the line follows `#' will be ignored.
+</dl>
+
+<p>
+The other file formats supported by spwave can be detected automatically.
+
+The file that cannot be detected has to be specified the following values.
+</p>
+
+<ul>
+  <li> Sampling Frequency<br>
+      <p>
+      
+  <li> Number of Channels<br>
+  Indicate how many channels is included in the file. For example, the stereo data is 2 channels.
+      <p>
+      
+  <li> Bits/Sample<br>
+Bits per sample of the input file.
+    When the selected file format is u-law or a-law, this value is ignored.
+    spwave converts bits/sample into 16 bits/sample internally when the file
+    has a bits/sample lower than 16 bits.
+  <br>
+    Select 64, if the file includes floating point numbers.
+</ul>
+
+
+<h3><a name="region">Region</a></h3>
+
+
+<h3><a name="file_play">Playing Files</a></h3>
+
+
+
+<h3><a name="file_edit">Editing Files</a></h3>
+
+
+
+<h3><a name="movement">Moving View</a></h3>
+
+
+<h3><a name="overview">Overview Area</a></h3>
+
+
+<h3><a name="label">Labels</a></h3>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Operation</a> &gt; Basic Operation
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2004-07-19 17:04:24 hideki"
+</p>
+</body>
+</html>

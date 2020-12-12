@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Sampling Frequency Conversion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="samp_freq_conv">Sampling Frequency Conversion</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Sampling Frequency Conversion
+</p>
+
+<p>
+This is a dialog displayed in sampling frequency conversion.
+The default setting si high quality for speech files, 
+you don't need to change parameters except for expert users.
+The processing speed is not so fast in compensation for the high quality.
+So, change parameters based on the following explanation when you use a slow machine.
+</p>
+<p>
+On the other hand, the default setting seems not to be so high quality for
+music files such as MP3. In this case, making the sidelobe value bigger (more
+than 80dB) is recommended.
+</p>
+
+
+<dl>
+<dt><a name="sfc_samp_freq">Sampling Frequency</a></dt>
+<dd>Target sampling frequency.
+When the greatest common divisor of the sampling frequencies is small such as
+48 kHz and 44.1 kHz, the output sampling frequency is sometimes not
+identical. The tolerance of the output sampling frequency can be specified by 
+<a href="#sfc_tolerance">Tolerance</a>.
+</dd>
+  
+<dt><a name="sfc_cutoff">Normalized Frequency</a></dt>
+<dd>Normalized cut-off frequency of a lowpass filter.
+  1.0 means the Nyquist frequency (half of sampling frequency).
+  Smaller value makes the wider frequency region cut off.
+  Too big value can cause aliasing noise.
+  I recommend the value from 0.9 to 0.95.
+</dd>
+  
+<dt><a name="sfc_transition">Normalized Transition</a></dt>
+<dd>
+  Transition frequency width for a lowpass filter in normalized frequency.
+  1.0 means the Nyquist frequency.
+  The bigger value makes the lowpass filter having more gentle slope.
+  Too big value can cause aliasing noise.
+  The value from 0.05 to 0.1 is recommended.
+</dd>
+
+<dt><a name="sfc_sidelobe">Sidelobe</a></dt>
+<dd>Sidelobe height of a lowpass filter.
+This parameter gives an amount of attenuation higher than the cut-off
+frequency. A bigger value makes the amount of attenuation bigger and
+decreases aliasing noise. However, the bigger value sometimes requires more CPU power.
+  <br>
+For speech files, I recommend 40 dB for processing speed, 50-60 dB for quality, 80 dB for
+  very high quality.
+  <br>
+For music files, these values are not sufficient, over 100 dB value is sometimes required.
+</dd>
+
+<dt><a name="sfc_gain">Gain</a></dt>
+<dd> Gain for sampling frequency conversion.
+The values more than 1.0 and less than 1.0 make the amplitude bigger and
+smaller, respectively.
+  <br>
+  This item is introduced in version 0.6.1.
+</dd>
+
+<dt><a name="sfc_tolerance">Tolerance</a></dt>
+
+<dd>Tolerance of sampling frequency conversion. A smaller value makes a
+smaller error.  The converted frequency includes an error within the
+tolerance.  A bigger value makes the processing speed fast when the greatest
+common divisor of the sampling frequencies is small such as 48 kHz and 44.1
+kHz. When the greatest common divisor is small, the tolerance is small, and
+the buffer length is long, very large memory will be required.
+  <br>
+When the greatest common divisor is big enough such as 48 kHz and 8 kHz, 
+the tolerance doesn't take effect.
+</dd>
+  
+<dt><a name="sfc_buffer_length">Buffer Length</a></dt>
+<dd>Buffer length for the processing.
+Although big value sometimes makes the processing faster, the usage of memory
+will be bigger.
+</dd>
+
+</dl>
+
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Sampling Frequency Conversion
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2004-07-24 21:21:23 hideki"
+</p>
+</body> </html>

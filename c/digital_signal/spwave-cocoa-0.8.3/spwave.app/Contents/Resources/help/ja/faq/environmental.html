@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>FAQ: Environmental</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="faq_environmental">環境依存</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">よくある質問</a> &gt; 環境依存
+</p>
+
+<dl>
+<dt><a name="64bitOS">Windows 7 64bitなどの64ビットOSでは動作しますか？</a>
+<dd>
+64ビット正式対応は，バージョン0.8.3からです．
+64ビットOS用バイナリの配布もこのバージョンから開始されました．
+
+<dt><a name="windowsxp">Windows XP以降では動作しますか？</a>
+<dd>
+正式対応は，バージョン0.6.8からです．
+それより前のバージョンでは，管理者権限が
+ないと動作しないとか，設定ファイルや一時ファイルが変なフォルダに作成されるなどの
+問題点があります．
+<br>
+なお，バージョン0.4までは，再生すると固まるという報告があります．
+また，バージョン0.6.0には，バグがあるため，Windows XPで起動しないことが分かっています．
+<br>
+一方で，バージョン0.6.7以降からWindows XPより前のOSは非サポートとなっています．
+
+  <br>
+<dt><a name="macosx">Mac OS Xには対応していますか？</a>
+<dd>
+Mac OS Xネイティブ版がリリースされています．
+これまではCarbon版のみでしたが，バージョン0.8.3からCocoa版もリリースされています．
+まだ大規模な動作チェックは完了していませんが，Mac OS X 10.6以降の環境では，Cocoa版がより安定していると思います．
+なお，現在のCarbon版は10.4以降のみに対応していますので，10.3以前では動作しません．
+
+  <br>
+<dt><a name="linux">Linuxで起動しません．</a>
+<dd>
+  バイナリバージョンをインストールした場合，
+  libcのバージョンやgtkのバージョンの不一致により起動しないことがあります．
+
+  こういった場合は再コンパイル &amp; 再インストールを行って下さい．
+  SRPMやdebファイルを使用するのが簡単だと思います．
+  <br>
+  また，spwave本体とプラグインのlibcのバージョンが異なっている場合でもファイルの読み込みに失敗します．
+  <a href="file.html#file_read">「どんなファイルも読み込めません」</a>も参考にして下さい．
+  
+</dl>  
+
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">よくある質問</a> &gt; 環境依存
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-09-03 12:56:21 hideki"
+</p>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Edit Menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2>Edit Menu</h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; Edit Menu
+</p>
+
+<p>
+Menus for editing a file.  When you edit a file, spwave adds a sign `*' to
+the file name so as to indicate the file was edited. If you reach the state
+that the file is not edited by undoing or saving files, the sign `*' will be
+cleared.
+</p>
+<p>
+Almost all edit operations can be stopped by <a
+href="popup_menu.html#popup_stop">Stop Processing</a>.
+</p>
+
+
+<h3><a name="edit_undo">Undo</a></h3>
+
+<p>
+Undo edit operation.
+</p>
+
+<h3><a name="edit_redo">Redo</a></h3>
+<p>
+Redo edit operation.
+</p>
+
+<h3><a name="edit_crop">Crop</a></h3>
+<p>
+Selected region is cropped.
+</p>
+
+<h3><a name="edit_delete">Delete</a></h3>
+<p>
+Selected region is removed.
+</p>
+
+<h3><a name="edit_erase">Erase</a></h3>
+<p>
+The values of selected region are set to 0.
+</p>
+
+<h3><a name="edit_extract">Extract</a></h3>
+<p>
+Extract selected region into a new window.
+Since the file of the window doesn't have a name, you have to choose 
+<a href="file_menu.html#file_save_as">`Save As'</a> in saving the file.
+</p>
+<p>
+Same operation can be executed by drag &amp; drop.
+Dragging the selected region into the outside of the window and releasing the
+button leads to Extract.
+</p>
+
+<h3><a name="edit_extract_autosave">Extract and Autosave</a></h3>
+<p>
+The selected region is extracted and the extracted file will be named automatically.
+Moreover, the extracted region is displayed in the original window.
+Naming strategy can be set by <a
+href="../dialog/preference.html#autosave">Autosave</a> of <a
+href="../dialog/preference.html">Preference Dialog</a>.
+</p>
+
+
+<h3><a name="edit_cut">Cut</a></h3>
+<p>
+Cut the selected region and copy the data into the clipboard.
+</p>
+
+<h3><a name="edit_copy">Copy</a></h3>
+<p>
+Copy data of the selected region into the clipboard.
+</p>
+
+<h3><a name="edit_concat">Concatenate to Tail</a></h3>
+<p>
+Concatenante the clipboard contents into the tail of the file.
+</p>
+
+<h3><a name="edit_concat_top">Concatenate to Head</a></h3>
+<p>
+Concatenante the clipboard contents into the head of the file.
+</p>
+
+<h3><a name="edit_clipboard_window">Clipboard Window...</a></h3>
+<p>
+Display contents of the clipboard.
+The clipboard contents can be edited just like other waveform windows.
+spwave has only one clipboard window. 
+In other words, the same clipboard is used for all windows.
+</p>
+
+
+<h3><a name="edit_amplify">Amplify...</a></h3>
+<p>
+Change amplitude of the selected region. The amplify rate can be specified by dB
+or percentages.
+</p>
+
+<h3><a name="edit_invert">Invert</a></h3>
+<p>
+Invert amplitude of the selected region.
+</p>
+
+<h3><a name="edit_fade_in">Fade In</a></h3>
+<p>
+Fade in the selected region. Linear fade in is used.
+</p>
+
+<h3><a name="edit_fade_out">Fade Out</a></h3>
+<p>
+Fade out the selected region. Linear fade out is used.
+</p>
+
+<h3><a name="edit_channel_swap">Channel Swap</a></h3>
+<p>
+Swap the selected channels. 
+The left and right will be swapped in a stereo file.
+When the file has multiple channels ordered 1, 2, 3, ..., N, 
+the order of channels of the resultant file is N, N-1, ..., 3, 2, 1.
+</p>
+
+
+<h3><a name="edit_maximize">Maximize...</a></h3>
+<p>
+Maximize the whole file.
+100 % (0 dB) means that the maximum value of the waveform has upper (or
+lower) limit value, e.g. 32767 in absolute value in 16 bits/sample file.
+
+The maximize rate can be specified by dB or percentages.
+</p>
+
+
+<h3><a name="edit_bit_conv">Bits/Sample Conversion...</a></h3>
+<p>
+Convert the bits/sample of the file.
+`32 (float)' means 32 bits floating format.
+</p>
+
+<h3><a name="edit_samp_freq_conv">Sampling Frequency Conversion...</a></h3>
+<p>
+Convert the sampling frequency of the file.
+The conversion will be executed by clicking OK button of <a href="../dialog/freq_conv.html">Samploing frequency conversion dialog</a>.
+Some settings in the dialog can cause time-consuming conversion.
+</p>
+
+<h3><a name="edit_monauralize">Monauralize</a></h3>
+<p>
+Monauralize the file. 
+This menu is vaild when the channels of the file is more than 2.
+</p>
+
+<h3><a name="edit_filtering">Filtering...</a></h3>
+<p>
+Execute filtering of the file.
+The filtering will be executed by clicking OK button
+of <a href="../dialog/filtering.html">Filtering dialog</a>.
+</p>
+
+<h3><a name="edit_info">File Information...</a></h3>
+<p>
+Edit the file information of the file.
+Clicking OK button of <a href="../dialog/file_info.html">File Information Dialog</a>
+leads to editing the information.
+Some items that the file format doesn't support cannot be edited.
+</p>
+
+<h3><a name="preference">Preference...</a></h3>
+<p>
+Change settings of spwave.
+Clicking OK or Apply buttons of <a href="../dialog/preference.html">Preference
+Dialog</a> changes the settings. 
+These settings are valid in the next execution of spwave.
+</p>
+
+<h3><a name="analysis_preference">Preference of Analysis...</a></h3>
+
+<p>
+Change settings for <a href="popup_menu.html#popup_analysis">Analysis</a>.
+Clicking OK or Apply buttons of 
+<a href="../dialog/analysis.html">Analysis Dialog</a>.
+Clicking Apply button applies immediately the setting into all analysis windows.
+</p>
+
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Menu Reference</a> &gt; Edit Menu
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2005-10-24 12:08:55 hideki"
+</p>
+</body> </html>

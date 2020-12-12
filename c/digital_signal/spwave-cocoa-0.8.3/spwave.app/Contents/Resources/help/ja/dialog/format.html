@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Format Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="format">フォーマット選択</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; フォーマット選択
+</p>
+
+<p>
+spwaveがファイルの種類を判定できなかったフォーマットの場合に出るダイアログです．
+spwaveでは，ファイルの種類を判定できなかったファイルは，Rawファイル（生データのことです）もしくはテキストファイルとみなします．
+Rawファイルは，通常音声データに関する情報（フォーマットのIDやサンプリング周波数やビット/サンプル）を含まないため，
+ファイルからファイルの種類を判定することはできません．
+そのため，適切なパラメータを自分で設定してやる必要があります．
+</p>
+<p>
+しかし，Rawファイル以外でもファイルの種類を判定できなかった場合にはこのダイアログが出ます．
+また，WAV，AIFF，MP3でも符号化方式によってはサポートされていないのでこのダイアログが出ることがあります．
+そのファイルがRawファイルでないと分かっているのであれば，このダイアログが出てきたらそのフォーマットはサポートされてないと思って下さい．
+</p>
+
+<dl>
+<dt><a name="format_format">ファイルフォーマット</a></dt>
+<dd>
+  ファイルの種類を指定します．<a href="../operation/basic.html#format">フォーマットに関する説明</a>を参考にして下さい．
+</dd>
+
+<dt><a name="format_bit">ビット/サンプル</a></dt>
+<dd>入力ファイルのビット/サンプルを指定します．
+  一昔前なら8ビットのファイルもあったのですが，最近であればほとんどが16ビットのファイルだと思います．
+  u-law，a-lawの場合はこの値に関係なく8ビットで読み込まれます．
+   spwaveでは，16ビット以下のファイルは内部的に全て16ビットに変換されて読み込まれます．    
+  <br>
+  小数点以下を含むテキストファイルのときには，64ビットを指定して下さい．
+</dd>
+
+<dt><a name="format_samp_rate">サンプリング周波数</a></dt>
+<dd>入力ファイルのサンプリング周波数を指定します．
+</dd>
+
+<dt><a name="format_channel">チャネル数</a></dt>
+<dd>入力ファイルのチャネル数を指定します．</dd>
+
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; フォーマット選択
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 15:26:42 hideki"
+</p>
+</body> </html>

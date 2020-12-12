@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Filtering Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="filtering">フィルタリング</a></h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; フィルタリング
+</p>
+
+<dl>
+<dt><a name="filter_type">フィルタの種類</a></dt>
+<dd>
+フィルタの種類を指定します．
+ローパス（Lowpass）フィルタ（低域通過フィルタ），
+ハイパス（Highpass）フィルタ（高域通過フィルタ），
+バンドパス（Bandpass）フィルタ（帯域通過フィルタ），
+バンドストップ（Bandstop）フィルタ（帯域阻止フィルタ）
+の4種類が指定できます．
+</dd>
+
+<dt><a name="hp_cutoff">ハイパスのカットオフ</a></dt>
+<dd>
+ハイパスフィルターの正規化カットオフ周波数を指定します．
+  1.0がナイキスト周波数（サンプリング周波数の半分）を示します．
+  この値を大きくするとより多くの帯域がカットされます．
+なお，ダイアログの左側の描画エリアに，Hz単位のカットオフ周波数が表示されます．
+
+この値は，バンドパスフィルタの場合には<a href="#lp_cutoff">ローパスのカットオフ</a>よりも小さく，
+バンドストップフィルタの場合にはローパスのカットオフよりも大きくする必要があります．
+</dd>
+
+<dt><a name="lp_cutoff">ローパスのカットオフ</a></dt>
+<dd>
+ローパスフィルターの正規化カットオフ周波数を指定します．
+  1.0がナイキスト周波数（サンプリング周波数の半分）を示します．
+  この値を小さくするとより多くの帯域がカットされます．
+なお，ダイアログの左側の描画エリアに，Hz単位のカットオフ周波数が表示されます．
+
+この値は，バンドパスフィルタの場合には<a href="#hp_cutoff">ハイパスのカットオフ</a>よりも大きく，
+バンドストップフィルタの場合にはハイパスのカットオフよりも小さくする必要があります．
+</dd>
+
+<dt><a name="sidelobe">サイドローブ</a></dt>
+<dd>
+ローパスフィルターのサイドローブの高さを指定します．
+サイドローブは，ローパスフィルターのカットオフ周波数以上の周波数の成分をどの程度減衰させるかを示します．
+この値が大きいほど高域の減衰量は多くなります．
+ただし，値を大きくすると，処理時間が増えることがあります．
+</dd>
+
+<dt><a name="transition">遷移域</a></dt>
+<dd>
+フィルターがどれくらいの帯域幅で減衰するかを正規化周波数で指定します．
+  1.0がナイキスト周波数を示します．
+  この値を大きくすると，ゆるやかに減衰するフィルターとなります．
+</dd>
+
+</dl>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">ダイアログリファレンス</a> &gt; フィルタリング
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2005-10-24 12:21:32 hideki"
+</p>
+</body> </html>

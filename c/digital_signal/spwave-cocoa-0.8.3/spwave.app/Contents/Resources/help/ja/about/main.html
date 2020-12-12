@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>spwave</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h1>spwaveについて</h1>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">spwaveについて</a>
+</p>
+
+<h2><a name="introduction">はじめに</a></h2> 
+
+<p>
+spwaveは，WAV，AIFF，MP3など様々なフォーマットに対応した音声ファイルエディタです．
+音声の研究に用いることを前提としており，使いやすく，安定したプログラムを目指しています．
+また，spwave は，マルチプラットホームに対応しており，Windows，Mac
+OS，Linuxなどで動作します．
+</p>
+
+<hr>
+<h2><a name="features">特徴</a></h2> 
+
+<p>
+spwaveは，次のような特徴を持っています．
+</p>
+<ul>
+<li> マルチプラットホーム: Windows，Mac OS，Linux（Motif，gtk）など
+<li> プラグインを用いた入出力による様々なフォーマットへの対応（WAV，AIFF，MP3，Ogg Vorbis，rawなど）
+<li> 対応するビット/サンプルは，8bit，16bit，24bit，32bit，32bit float，64bit double
+<li> サンプリング周波数やビット/サンプルの変換
+<li> 任意区間の再生，拡大，切り出し，削除，取り出し
+<li> 任意区間のフェードイン，フェードアウト，ゲイン調節，チャネル入れ換え
+<li> ファイル情報の編集（WAVファイルやAIFFファイルのコメントや，MP3のID3タグに対応）
+<li> 回数ほぼ無制限のアンドゥーとリドゥー
+<li> 任意区間の様々な方式（スペクトル，平滑化スペクトル，位相，アンラップド位相，群遅延）での分析
+<li> ドラッグ&amp;ドロップによる指定範囲の取り出し
+
+<li> ドラッグ&amp;ドロップによるファイルの読み込み
+<li> 指定範囲を自動的にファイル名を付けて切り出すことが可能（ドラッグ&amp;ドロップで行うことも可能）
+<li> 任意の位置や範囲をラベルとして保存可能
+<li> 複数の波形を同期して表示させたり，指定範囲を同期させたりできる
+<li> ほとんどの編集操作は内部で64bitで処理されるため，劣化が少ない
+</ul>
+
+<hr>
+<h2><a name="formats">対応ファイル一覧</a></h2> 
+
+<p>
+最新バージョンにおける対応ファイルの一覧を示します．
+ただし，以下の形式でも一部のファイルでは読み込みや書き込みができないことがあります．
+</p>
+
+<ul>
+<li> 読み込み &amp; 書き込み
+  <br>
+  書き込みの際の，WAVファイルやAIFFファイルのコメント，
+  MP3ファイルのID3タグに対応しています．
+  <ul>
+
+  <li> Rawファイル（8bit PCM，16bit PCM，24bit PCM，32bit PCM，32bit float PCM，64bit double PCM，ulaw，alaw）
+  <li> WAVファイル（8bit PCM，16bit PCM，24bit PCM，32bit PCM，ulaw，alaw, ADPCM, IMA ADPCM, GSM 6.10）
+  <li> AIFFファイル（8bit PCM，16bit PCM，24bit PCM，32bit PCM）
+  <li> AIFCファイル（8bit PCM，16bit PCM，24bit PCM，32bit PCM，ulaw，alaw）
+  <li> MP3ファイル（MPEG1 layer3，書き込みには別途プラグインのダウンロードが必要です）
+  <li> Ogg Vorbisファイル
+  <li> Windows Media Audio ファイル（Windows版のみ）
+  <li> Monkey's Audio(.ape)ファイル（Windows 32ビット版のみ）
+  <li> AU/SNDファイル（8bit PCM, 16bit PCM, 24bit PCM, 32bit PCM, ulaw, alaw, G721, G723）
+  <li> PARISファイル（16bit PCM, 24bit PCM）
+  <li> NISTファイル（16bit PCM, 24bit PCM, 32bit PCM, ulaw, alaw）
+  <li> IRCAMファイル（16bit PCM, 32bit PCM, ulaw, alaw）
+  <li> テキストファイル
+  </ul>
+
+<li> 読み込みのみ
+  <ul>
+  <li> MP3ファイル（MPEG2 layer3，VBRも可）
+  <li> RMPファイル（MPEG1 layer3，MPEG2 layer3，VBRも可）
+  </ul>
+
+</ul>
+
+<hr>
+<h2><a name="install">インストール</a></h2> 
+
+<p>
+Windows，Mac OSでのバイナリパッケージのインストールは基本的にアーカイブを解凍するだけです．
+必要なプラグインなども入っています．
+ただし，実行ファイルを移動させるときは，必ずプラグインも同じフォルダ構成で移動させて下さい．
+実行ファイル単体だけを移動した場合には，起動はしますがファイルが全く読み込めなくなります．
+</p>
+
+<p>
+バージョン0.5以降をUnix環境で使用する場合には，プラグインのインストールが別途必要となります．
+Linuxでは，RPMバージョン（Redhat系）・debバージョン（debian系）をインストールするのが最も簡単だと思います（ここでは方法は説明しません）．
+</p>
+<p>
+アンインストールは単にファイルを削除するだけです．
+インストールによってレジストリを変更したりシステムを書き換えたりすることは一切ありませんので，
+安心して削除できます．
+LinuxでRPM・debを使用してインストールした場合は，RPM・debの使用方法に従ってアンインストールして下さい．
+</p>
+
+<p>
+Linux等で，ソースコードからコンパイルしてインストールする場合は，<a
+href="compile.html">コンパイル方法</a>を参照して下さい．
+</p>
+
+
+<hr>
+<h2><a name="platforms">動作確認</a></h2> 
+
+<p>
+Windows XP/Vista/7，Mac OS 10.4/10.6，Linux（Redhat, CentOS, Ubuntu等）などでの動作が確認されています．
+</p>
+
+
+<hr>
+<h2><a name="bugs">バグ</a></h2> 
+
+<p>
+波形の拡大率が小さい時に表示される振幅の値（Amplitude）は，必ずしも本来
+の時間における値と一致していません．振幅の値を得たい場合は，波形を十分に
+（サンプリング周期が分かる程度に）拡大してからAmplitudeの値を見て下さい．長い
+ファイルの値の表示を高速化するためにこのような仕様になっています．また，同様の
+理由で，バージョン0.6.7から付いたレベルメーターも，時間と値は正確には同期して
+いないので注意して下さい．
+</p>
+
+<p>
+0.6.11-2bからは，ASIOドライバーを経由した音声再生に対応しましたが，
+「ASIO Multimedia Driver」は現状では正常に動作しません．ASIO対応デバイスの
+ASIOドライバを使用して下さい．「ASIO Multimedia Driver」は，ASIO対応デバイス
+以外を動作させるためのものなので，実用上は困らないと思います．
+</p>
+
+<p>
+0.6.12-4bから対応した，Windows Media Audioファイルの読み込みで，スクロール
+したときの位置がおかしいことがあります（特に，ロスレスフォーマットはほぼ
+確実に発生）．Microsoftの提供するライブラリの問題なのか，私の実装の問題
+なのか現時点では不明です．困る場合は，一旦WAVフォーマットなどで保存して
+から作業を行って下さい．
+</p>
+
+<p>
+Mac OS X (Carbon)版では，波形オーバービュー上のマウスの右クリックによる
+操作が正しく機能しないというバグがあります．Cocoa版ではそのような問題は
+ありません．
+</p>
+
+
+<hr>
+<h2><a name="bug_report">質問やバグ報告</a></h2> 
+
+<p>
+質問がある場合やバグを発見した場合，ぜひ電子メールで連絡下さい．
+ただし，質問の場合，この文書やホームページに載っていることに関しては，返事を出せないかもしれません．
+あと，返事は遅れることも結構ありますので（ごめんなさい），そんなときは気長に待っていて下さい．
+また，返事をせずに回答だけをホームページに掲載することもたまにありますので（同様の質問が短期間に集中した場合など），そんなときは，再度ホームページをチェックしてみるのも良いかもしれません．
+
+バグ報告の際は，できるだけ以下の項目は記述して下さい．
+</p>
+<ul>
+<li> spwaveのバージョン（0.6.5-1など．ダウンロードしたアーカイブ名でも構いません）
+<li> OSのバージョン（Windows XP SP2，Mac OS X 10.6.8など）
+<li> 症状（何をするとどうなるのかをできるだけ詳しくお願いします）
+<li> プラグインのバージョン（特定のファイルの読み書きに関するバグの場合．例えばMP3出力プラグインのバグなど）
+</ul>
+<p>
+また，サブジェクトにspwaveの文字を入れて頂けると助かります．
+</p>
+
+<p>
+なお，「MP3の保存ができない」という質問が大変多いですが，MP3に関するライセンス
+・特許などを考慮し，初期状態では保存できないようになっています．保存できるように
+するには，別途プラグインのダウンロード・インストールが必要です．公式ページの
+利用条件を確認し，自分が条件を満たしている場合は，公式ページからダウンロードし
+インストールして下さい．
+</p>
+
+
+<hr>
+<h2><a name="license">ライセンス</a></h2> 
+
+<p>
+spwaveはフリーソフトウェアです．
+詳しくは，アーカイブに含まれているLICENSE.txtを見て下さい．
+</p>
+
+
+<hr>
+<h2><a name="official_site">オフィシャルサイト</a></h2> 
+
+<p>
+オフィシャルサイトは，
+<a href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/spwave/index-j.html"
+ target="_top">
+http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/spwave/index-j.html</a>
+です．最新版のダウンロードやバグに関する最新情報を得ることができます．
+よくある質問に対する回答も掲載してありますので，問題が発生した場合はまずこちらを
+見ることをお勧めします．
+</p>
+
+
+<hr>
+<h2><a name="thanks_to">Thanks To</a></h2> 
+
+<p>
+ファイルの読み書きには以下のライブラリが使用されています．それぞれのライブラリを
+開発し，公開されている方に感謝致します．
+</p>
+<ul>
+<li> AU/SND, PARIS, NIST, IRCAM, WAV ADPCM, ... (バージョン0.6.8から)
+  <ul>
+  <li> <a href="http://www.mega-nerd.com/libsndfile/" target="_top">libsndfile</a><br>
+      上記のフォーマットの読み書きはこのlibsndfileによって可能になりました．
+      開発者のErikさん，いろいろとありがとうございます．
+  </ul>
+
+<li> Ogg Vorbis (バージョン0.6.8から)
+  <ul>
+  <li> <a href="http://www.vorbis.com/" target="_top">libvorbis と libogg</a>
+  </ul>
+
+<li> Monkey's Audio (Windows 32ビット版のみ．バージョン0.6.11から)
+  <ul>
+  <li> <a href="http://www.monkeysaudio.com/" target="_top">http://www.monkeysaudio.com/</a>
+  </ul>
+
+<li> MP3読み込み (spMpegのプラグインに含まれています)
+  <ul>
+  <li> FreeAmp（現在は，Zinfという名前になっているようです）のデコードエンジン
+  </ul>
+
+<li> ASIO ドライバー対応 (バージョン0.6.11から．asioプラグインに含まれています)
+  <ul>
+  <li> Steinberg ASIO Software Developer Kit<br>
+      Copyright notice: ASIO is a trademark of Steinberg Soft- und Hardware GmbH
+  </ul>
+</ul>
+<p>
+また，パッチを作成して下さった方，バグ報告や要望などを送って下さった方，
+ありがとうございました．今後ともよろしくお願いします．
+</p>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">spwaveについて</a>
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-09-08 18:34:52 hideki"
+</p>
+</body>
+</html>

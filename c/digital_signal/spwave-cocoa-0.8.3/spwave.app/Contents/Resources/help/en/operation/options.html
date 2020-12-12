@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Command-Line Options</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2>Command-Line Options</h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Operation</a> &gt; Command-Line Options
+</p>
+
+<dl>
+  <dt> <a name="option_freq"><b>-f -freq</b></a> <i>???</i>
+  <dd>
+      Sampling frequency in Hz.
+      <br>
+      Example:
+      <pre>
+      spwave -f 8000 data_8k.ad
+      </pre>
+      In this example, data_8k.ad will be loaded with 8kHz sampling frequency.
+
+  <dt> <a name="option_format"><b>-F -format</b></a> <i>???</i>
+  <dd>
+      File format. See 
+      <a href="basic.html#format">Format</a> for more information.
+      <p>
+      Example:
+      <pre>
+      spwave -format swap data_swap.ad
+      </pre>
+      In this example, data_swap.ad will be loaded with swap format.
+      <p>
+
+  <dt> <a name="option_channel"><b>-c -channel</b></a> <i>???</i>
+  <dd>
+      Number of Channels.
+      <br>
+      Example:
+      <pre>
+      spwave -channel 8 data_8channel.ad
+      </pre>
+      In this example, data_8channel.ad will be loaded with 8 channels data format.
+      
+  <dt> <a name="option_bit"><b>-b -bit</b></a> <i>bits_per_sample</i>
+  <dd>
+  Bits/sample. For example. `short' type in C language is 16 bits/sample.
+  For more information, see <a href="basic.html#format">Format</a>.
+      
+      <p>
+      Example:
+      <pre>
+      spwave -bit 64 data_64bit.ad
+      </pre>
+      In this example, data_64bit.ad will be loaded with 64 bits/sample data format.
+      <p>
+
+
+<!--
+  <dt> <a name="option_play_command"><b>-play</b></a> <i>play_command</i>
+  <dd>
+      Play command.  This command is used to play a file.  This options is
+      not valid on some enviroments such as Linux, Windows, etc. unless <a
+      href="#option_use_play"><b>-useplay option</b></a> is specified.  This
+      setting is used in the next execution.
+      <br>
+      The command can include the following control characters.
+      <dl>
+	<dt><i>%F</i>, <i>%s</i>
+	<dd>
+	File name.
+	The file is regarded as 16 bit linear raw file.
+
+	<dt><i>%W</i>
+	<dd>
+	WAVE file name.
+	The file is regarded as 16 bit linear WAVE format.
+
+	<dt><i>%H</i>
+	<dd>
+	Sampling frequency in Hz.
+
+	<dt><i>%K</i>
+	<dd>
+	Sampling frequency in kHz.
+	    
+	<dt><i>%C</i>
+	<dd>
+	Number of channels.
+	The stereo file cannot be played without this character.
+      </dl>
+      Example:
+      <pre>
+      spwave -play "play_sound -f %H %F"
+      </pre>
+      In this example, the play command is "play_sound" which recognizes
+      a sampling frequency in Hz through -f option and can play a 16 bit
+      linear raw file.
+      
+      
+  <dt> <a name="option_use_play"><b>-useplay</b></a> <i>(use_play)</i>
+  <dd>
+    Playing a file uses the command specified by <a
+    href="#option_play_command"><b>-play option</b></a>.
+
+    The play command is not valid on some enviroments such as Linux, Windows,
+    etc. unless this option is specified.  This setting is used in the next
+    execution.
+
+-->
+  
+  <dt> <a name="option_help"><b>-h -help</b></a>
+  <dd>
+  Diplay help messages.
+      
+</dl>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Operation</a> &gt; Command-Line Options
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-22 01:33:00 hideki"
+</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="ja">
+<head>
+<title>Compile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+<h2>コンパイル方法</h2>
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">spwaveについて</a> &gt; コンパイル方法
+</p>
+
+<p>
+ソースからコンパイルを行う場合は，spLibs（spBase，spAudio，spComponent，spLib，spPlugin）が必要になります．
+spLibsは<a href="http://www-is.meijo-u.ac.jp/labs/rj001/spLibs/index-j.html#download"
+target="_top">ここ</a>からダウンロードできます．
+</p>
+<p>
+Unixバージョンをコンパイルする場合は（LinuxやCygwinを含みます），
+まずspwaveのディレクトリに移動し，
+spLibsの`include'ディレクトリと`lib'ディレクトリにシンボリックリンクを張ります（例えば/usr/local/includeと/usr/local/lib）．
+</p>
+<pre>
+ % cd spwave-X.X.X
+ % ln -s /usr/local/include
+ % ln -s /usr/local/lib
+</pre>
+
+<p>
+コンパイル環境の設定がspBaseの設定ファイルに記述されている場合は，spwaveのソースディレクトリに移動し，
+</p>
+<pre>
+ % cd spwave
+ % make
+</pre>
+<p>
+を実行するだけでライブラリをコンパイルすることができます．
+</p>
+
+<p>
+このライブラリを，システムにインストールする場合は（例えば/usr/localなど），
+ルートでログインして以下のように実行してください．
+</p>
+<pre>
+ # make SPDESTROOT=/usr/local install
+</pre>
+
+<p>
+spLibsのあるディレクトリにシンボリックリンクを張りたくない人は，make
+のオプションに，<code>TOP=/usr/local</code> （/usr/local
+は，spLibsのトップディレクトリを表します）を付け加えることでもインストールすることができます．
+</p>
+<pre>
+ % cd spwave-X.X.X
+ % cd spwave
+ % make TOP=/usr/local
+ % su
+ # make TOP=/usr/local SPDESTROOT=/usr/local install
+</pre>
+
+<p>
+なお，Linux上では，gtkバージョンが強制的に選択されるため，
+Motifバージョンをコンパイルするためには，<code>USE_MOTIF=y</code>というオプションを
+makeのオプションに加えて下さい．
+WindowsやMac OSでも自分でコンパイルしたいという人は，頑張ってやってみて下さい(^^)
+</p>
+
+
+<p class="location">
+<a href="../index2.html">ユーザーズガイド</a> &gt; <a href="index.html">spwaveについて</a> &gt; コンパイル方法
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2012-08-21 22:15:50 hideki"
+</p>
+</body>
+</html>

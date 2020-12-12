@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html lang="en">
+<head>
+<title>Generate Dialog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="StyleSheet" href="../../default.css">
+<link rel="Contents" href="index.html"> 
+<link rel="Prev" href="index.html"> 
+</head>
+<body text="#000000" link="#0000ff" bgcolor="#ffffff" vlink="#0000a0" alink="#0000ff">
+
+
+<h2><a name="generate">Generate Dialog</a></h2>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Generate Dialog
+</p>
+
+
+<h3><a name="waveform_tab">Waveform</a></h3>
+
+<dl>
+<dt><a name="waveform">Waveform</a></dt>
+<dd>
+Waveform type.
+<ul>
+<li>Recording: Select to perform recording.</li>
+<li>Silence: Select to generate a silence file.</li>
+<li>Sine: Sine wave.</li>
+<li>Square: Square wave.</li>
+<li>Triangle: Triagnle wave.</li>
+<li>Sawtooth: Sawtooth wave.</li>
+<li>White Noise: White noise.</li>
+</ul>
+</dd>
+
+<dt><a name="f0">Frequency</a></dt>
+<dd>
+Fundamental frequency. This value corresponds to pitch of the generated signal.
+This setting is valid in Sine, Square, Triangle and Sawtooth wave cases.
+</dd>
+
+<dt><a name="phase">Phase</a></dt>
+<dd>
+Initial phase of the signal in degree. This value affects the start position of wave.
+This setting is valid in Sine, Square, Triangle and Sawtooth wave cases.
+</dd>
+
+<dt><a name="gain_dB">Gain (dB)</a></dt>
+<dd>
+Gain of the signal in decibels to maximum limit value (32768 in 16 bits case).
+For example, the gain will be -6 dB when the amplitude is half (16384 in 16
+bits case) of the limit value.
+This setting is valid in Sine, Square, Triangle and Sawtooth wave cases.
+A small gain value is recommended in the white noise case, because white
+noise easily causes overflow.
+</dd>
+
+<dt><a name="gain">Gain (%)</a></dt>
+<dd>
+Gain of the signal in percentage to maximum limit value.
+For example, the gain will be 50 % when the amplitude is half (16384 in 16
+bits case) of the limit value.
+This setting is valid in Sine, Square, Triangle and Sawtooth wave cases.
+A small gain value is recommended in the white noise case, because white
+noise easily causes overflow.
+</dd>
+
+<dt><a name="delay">Delay</a></dt>
+<dd>
+Delay time for the wave. The wave begins after this time.
+Zero-padding is employed before the beginning.
+</dd>
+
+<dt><a name="duration">Duration</a></dt>
+<dd>
+Duration time of the wave.
+</dd>
+</dl>
+
+
+<h3><a name="file_tab">File</a></h3>
+
+<dl>
+<dt><a name="length">Total Length</a></dt>
+<dd>
+Total length of the signal. The total length will be automatically calculated
+from <a href="#delay">Delay</a> and <a href="#duration">Duration</a>
+in the value 0.
+</dd>
+
+<dt><a name="bit">Bits/Sample</a></dt>
+<dd>
+Bits per sample of the signal.
+</dd>
+
+<dt><a name="samp_rate">Sampling Frequency</a></dt>
+<dd>
+Sampling frequency of the signal.
+</dd>
+
+<dt><a name="channel">Number of Channels</a></dt>
+<dd>
+Number of channels of the signal.
+</dd>
+</dl>
+
+<p class="location">
+<a href="../index2.html">User's Guide</a> &gt; <a href="index.html">Dialog Reference</a> &gt; Generate Dialog
+</p>
+
+<hr>
+<p class="lastupdate">
+Last modified: "2009-01-05 15:20:38 hideki"
+</p>
+</body> </html>
