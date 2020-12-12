@@ -22,9 +22,11 @@
   - /USBIO/windows/usbIO_Windows.py: USBがパソコンに接続したとき、このプログラムを立ち上がって、リターンキーでeject、insertの二つの動作を繰り返す動作のみ。Windowsのパソコンのみ動作する。（cmdのコマンドを実行しているだけ。）
     - 注意事項1:ejectした後、プログラムを止めた場合、USBを再度insertしてください
     - 注意事項2:管理者権限が必要です。
-- python/rakuten_clickpost: 楽天で販売履歴のcsvファイルをダウンロードして、そのファイルの中身より住所録を取り出してクリックポストに使用できる。(詳細不明、そうすればいいことがあるみたい。)
+  - python/rakuten_clickpost: 楽天で販売履歴のcsvファイルをダウンロードして、そのファイルの中身より住所録を取り出してクリックポストに使用できる。
   - /yue/wordcloud_test.txt
     - wordcloudの基本作成、メモ用
+  - DD_python: 院生の初アルバイトで作ったコード
+
 
 - r
   - home.txt: 大学院集中講義の宿題

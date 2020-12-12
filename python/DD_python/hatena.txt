@@ -1,0 +1,10 @@
+文字コード、csv
+http://tohokuaiki.hateblo.jp/entry/20140205/1391589045
+
+
+javaでエクセルを扱う
+http://web.plus-idea.net/2016/01/how_to_read_excel_java_apache_poi/
+
+クラスパス通す
+http://www.hot-surprise.org/IntroEclipse/Operation/N01/3_3.html
+英語版では:プロジェクト右クリック→properties→java build path→
