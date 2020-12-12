@@ -3,35 +3,35 @@
 -------
 
 
-‚Ó‚Á‚ÆŽv‚¢o‚µ‚ÄAƒpƒb‚Æ‚Æì‚èo‚·ƒvƒƒOƒ‰ƒ€B
+ãµã£ã¨æ€ã„å‡ºã—ã¦ã€ãƒ‘ãƒƒã¨ã¨ä½œã‚Šå‡ºã™ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€‚
 
 -------
 
 
 
-### “à—eà–¾(Description):
+### å†…å®¹èª¬æ˜Ž(Description):
 
 - Arduino/robot_laboratory
-  - hank3_12-2.ino: ’¹Žæ‘åŠwƒƒ{ƒbƒgƒ‰ƒ{ƒ‰ƒgƒŠ[‚ÅŽQ‰Á‚µ‚½ƒ‰ƒ“ƒT[‹£‹ZƒXƒ^ƒ“ƒ_[ƒhƒNƒ‰ƒXŒˆŸio‚Å‚«‚½Žž‚ÌƒvƒƒOƒ‰ƒ€Bi‰ƒo[ƒWƒ‡ƒ“Ver3.12j
+  - hank3_12-2.ino: é³¥å–å¤§å­¦ãƒ­ãƒœãƒƒãƒˆãƒ©ãƒœãƒ©ãƒˆãƒªãƒ¼ã§å‚åŠ ã—ãŸãƒ©ãƒ³ã‚µãƒ¼ç«¶æŠ€ã‚¹ã‚¿ãƒ³ãƒ€ãƒ¼ãƒ‰ã‚¯ãƒ©ã‚¹æ±ºå‹é€²å‡ºã§ããŸæ™‚ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€‚ï¼ˆåˆãƒãƒ¼ã‚¸ãƒ§ãƒ³Ver3.12ï¼‰
 
 - go/abc084
-  - ‰goŒ¾Œê‚Åabc‚ðŽQí‚µ‚½AŽžŠÔ‚©‚©‚Á‚½‚Ì‚ÅƒoƒbƒNƒAƒbƒv‚Æ‚µ‚Ä•Û‘¶‚µ‚½B
+  - åˆgoè¨€èªžã§abcã‚’å‚æˆ¦ã—ãŸã€æ™‚é–“ã‹ã‹ã£ãŸã®ã§ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã¨ã—ã¦ä¿å­˜ã—ãŸã€‚
 
 - python
-  - /USBIO/windows/usbIO_Windows.py: USB‚ªƒpƒ\ƒRƒ“‚ÉÚ‘±‚µ‚½‚Æ‚«A‚±‚ÌƒvƒƒOƒ‰ƒ€‚ð—§‚¿ã‚ª‚Á‚ÄAƒŠƒ^[ƒ“ƒL[‚ÅejectAinsert‚Ì“ñ‚Â‚Ì“®ì‚ðŒJ‚è•Ô‚·“®ì‚Ì‚ÝBWindows‚Ìƒpƒ\ƒRƒ“‚Ì‚Ý“®ì‚·‚éBicmd‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ä‚¢‚é‚¾‚¯Bj
-    - ’ˆÓŽ–€1:eject‚µ‚½ŒãAƒvƒƒOƒ‰ƒ€‚ðŽ~‚ß‚½ê‡AUSB‚ðÄ“xinsert‚µ‚Ä‚­‚¾‚³‚¢
-    - ’ˆÓŽ–€2:ŠÇ—ŽÒŒ ŒÀ‚ª•K—v‚Å‚·B
-- python/rakuten_clickpost: Šy“V‚Å”Ì”„—š—ð‚Ìcsvƒtƒ@ƒCƒ‹‚ðƒ_ƒEƒ“ƒ[ƒh‚µ‚ÄA‚»‚Ìƒtƒ@ƒCƒ‹‚Ì’†g‚æ‚èZŠ˜^‚ðŽæ‚èo‚µ‚ÄƒNƒŠƒbƒNƒ|ƒXƒg‚ÉŽg—p‚Å‚«‚éB(Ú×•s–¾A‚»‚¤‚·‚ê‚Î‚¢‚¢‚±‚Æ‚ª‚ ‚é‚Ý‚½‚¢B)
+  - /USBIO/windows/usbIO_Windows.py: USBãŒãƒ‘ã‚½ã‚³ãƒ³ã«æŽ¥ç¶šã—ãŸã¨ãã€ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ç«‹ã¡ä¸ŠãŒã£ã¦ã€ãƒªã‚¿ãƒ¼ãƒ³ã‚­ãƒ¼ã§ejectã€insertã®äºŒã¤ã®å‹•ä½œã‚’ç¹°ã‚Šè¿”ã™å‹•ä½œã®ã¿ã€‚Windowsã®ãƒ‘ã‚½ã‚³ãƒ³ã®ã¿å‹•ä½œã™ã‚‹ã€‚ï¼ˆcmdã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¦ã„ã‚‹ã ã‘ã€‚ï¼‰
+    - æ³¨æ„äº‹é …1:ejectã—ãŸå¾Œã€ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’æ­¢ã‚ãŸå ´åˆã€USBã‚’å†åº¦insertã—ã¦ãã ã•ã„
+    - æ³¨æ„äº‹é …2:ç®¡ç†è€…æ¨©é™ãŒå¿…è¦ã§ã™ã€‚
+- python/rakuten_clickpost: æ¥½å¤©ã§è²©å£²å±¥æ­´ã®csvãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã€ãã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¸­èº«ã‚ˆã‚Šä½æ‰€éŒ²ã‚’å–ã‚Šå‡ºã—ã¦ã‚¯ãƒªãƒƒã‚¯ãƒã‚¹ãƒˆã«ä½¿ç”¨ã§ãã‚‹ã€‚(è©³ç´°ä¸æ˜Žã€ãã†ã™ã‚Œã°ã„ã„ã“ã¨ãŒã‚ã‚‹ã¿ãŸã„ã€‚)
   - /yue/wordcloud_test.txt
-    - wordcloud‚ÌŠî–{ì¬Aƒƒ‚—p
+    - wordcloudã®åŸºæœ¬ä½œæˆã€ãƒ¡ãƒ¢ç”¨
 
 
 - r
-  - home.txt: ‘åŠw‰@W’†u‹`‚Ìh‘è
+  - home.txt: å¤§å­¦é™¢é›†ä¸­è¬›ç¾©ã®å®¿é¡Œ
   - fuji/   :
-    - ŽQl•¶Œ£: wƒeƒLƒXƒgƒ}ƒCƒjƒ“ƒO“ü–åxÎ“cŠîL
-    - “Á‚ÉRMeCab‚Ì—á‘è‚ð“ñ–â‚Ù‚ÇŽÀ‘•‚µ‚½
-    
+    - å‚è€ƒæ–‡çŒ®: ã€Žãƒ†ã‚­ã‚¹ãƒˆãƒžã‚¤ãƒ‹ãƒ³ã‚°å…¥é–€ã€çŸ³ç”°åŸºåºƒ
+    - ç‰¹ã«RMeCabã®ä¾‹é¡Œã‚’äºŒå•ã»ã©å®Ÿè£…ã—ãŸ
+
 
 
 
